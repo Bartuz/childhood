@@ -1,8 +1,6 @@
 class ChildrenController < ApplicationController
 
   def new
-
-
   end
 
   def show
