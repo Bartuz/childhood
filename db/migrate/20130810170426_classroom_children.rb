@@ -1,8 +1,9 @@
 class ClassroomChildren < ActiveRecord::Migration
   def change
-   create_table :classroom_children, id: false do |t|
-      t.references :child, index: true
-      t.references :classroom, index: true
+   create_table :children_classrooms, id: false do |t|
+      t.belongs_to :child
+      t.belongs_to :classroom
     end
+
   end
 end
