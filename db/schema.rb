@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130810170748) do
+ActiveRecord::Schema.define(version: 20130810173141) do
 
   create_table "cateogries", force: true do |t|
     t.string   "name"
@@ -48,6 +48,14 @@ ActiveRecord::Schema.define(version: 20130810170748) do
   end
 
   add_index "classrooms", ["educator_id"], name: "index_classrooms_on_educator_id"
+
+  create_table "classrooms_teachers", id: false, force: true do |t|
+    t.integer "classroom_id", null: false
+    t.integer "teacher_id",   null: false
+  end
+
+  add_index "classrooms_teachers", ["classroom_id", "teacher_id"], name: "index_classrooms_teachers_on_classroom_id_and_teacher_id"
+  add_index "classrooms_teachers", ["teacher_id", "classroom_id"], name: "index_classrooms_teachers_on_teacher_id_and_classroom_id"
 
   create_table "educators", force: true do |t|
     t.integer  "user_id"

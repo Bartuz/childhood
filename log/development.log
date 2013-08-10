@@ -7633,3 +7633,12 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:31
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateJoinTableClassroomsTeachers (20130810173141)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "classrooms_teachers" ("classroom_id" integer NOT NULL, "teacher_id" integer NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_classrooms_teachers_on_classroom_id_and_teacher_id" ON "classrooms_teachers" ("classroom_id", "teacher_id")
+  [1m[36m (0.5ms)[0m  [1mCREATE INDEX "index_classrooms_teachers_on_teacher_id_and_classroom_id" ON "classrooms_teachers" ("teacher_id", "classroom_id")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810173141"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
