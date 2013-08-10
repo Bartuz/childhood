@@ -15,7 +15,6 @@ LearningLoop::Application.routes.draw do
      resources :families
      resources :educator
      resources :children
-
   # Example resource route with options:
   #   resources :products do
   #     member do
