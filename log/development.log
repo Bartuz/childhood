@@ -7303,342 +7303,1878 @@ Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-08-10 12:21:37 -04
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-10 12:21:37 -0400
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-Migrating to CreateTags (20130810162308)
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
-  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810162308"]]
-  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
-  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-Migrating to CreateEvents (20130810165638)
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810165638"]]
-  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
-Migrating to CreateCateogries (20130810165944)
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "cateogries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
-  [1m[35m (0.1ms)[0m  CREATE INDEX "index_cateogries_on_category_id" ON "cateogries" ("category_id")
-  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810165944"]]
-  [1m[35m (1.3ms)[0m  commit transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
-  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-Migrating to CreateUsers (20130810150606)
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150606"]]
-  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
-Migrating to CreateParents (20130810150636)
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "parents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
-  [1m[35m (0.1ms)[0m  CREATE INDEX "index_parents_on_user_id" ON "parents" ("user_id")
-  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810150636"]]
-  [1m[35m (1.0ms)[0m  commit transaction
-Migrating to CreateEducators (20130810150640)
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.3ms)[0m  CREATE TABLE "educators" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
-  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_educators_on_user_id" ON "educators" ("user_id")[0m
-  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150640"]]
-  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
-Migrating to CreateChildren (20130810150835)
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "children" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
-  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150835"]]
-  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
-Migrating to CreateClassrooms (20130810153852)
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "classrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
-  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810153852"]]
-  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
-Migrating to CreateEvents (20130810165638)
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
-  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810165638"]]
-  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
-Migrating to CreateCateogries (20130810165944)
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "cateogries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
-  [1m[35m (0.2ms)[0m  CREATE INDEX "index_cateogries_on_category_id" ON "cateogries" ("category_id")
-  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810165944"]]
-  [1m[35m (1.2ms)[0m  commit transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
-  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-Migrating to CreateUsers (20130810150606)
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150606"]]
-  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
-Migrating to CreateParents (20130810150636)
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "parents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
-  [1m[35m (0.1ms)[0m  CREATE INDEX "index_parents_on_user_id" ON "parents" ("user_id")
-  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810150636"]]
-  [1m[35m (1.1ms)[0m  commit transaction
-Migrating to CreateEducators (20130810150640)
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.3ms)[0m  CREATE TABLE "educators" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
-  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_educators_on_user_id" ON "educators" ("user_id")[0m
-  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150640"]]
-  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
-Migrating to CreateChildren (20130810150835)
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "children" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "parents_id" integer, "created_at" datetime, "updated_at" datetime) [0m
-  [1m[35m (0.1ms)[0m  CREATE INDEX "index_children_on_parents_id" ON "children" ("parents_id")
-  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810150835"]]
-  [1m[35m (1.0ms)[0m  commit transaction
-Migrating to CreateClassrooms (20130810153852)
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.3ms)[0m  CREATE TABLE "classrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "educator_id" integer, "created_at" datetime, "updated_at" datetime) 
-  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_classrooms_on_educator_id" ON "classrooms" ("educator_id")[0m
-  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810153852"]]
-  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
-Migrating to CreateEvents (20130810165638)
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "notes" varchar(255), "classroom_id" integer, "child_id" integer, "created_at" datetime, "updated_at" datetime) [0m
-  [1m[35m (0.1ms)[0m  CREATE INDEX "index_events_on_classroom_id" ON "events" ("classroom_id")
-  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_events_on_child_id" ON "events" ("child_id")[0m
-  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810165638"]]
-  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
-Migrating to CreateCateogries (20130810165944)
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "cateogries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
-  [1m[35m (0.1ms)[0m  CREATE INDEX "index_cateogries_on_category_id" ON "cateogries" ("category_id")
-  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810165944"]]
-  [1m[35m (0.8ms)[0m  commit transaction
-Migrating to ClassroomChildren (20130810170426)
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.4ms)[0m  CREATE TABLE "classroom_children" ("child_id" integer, "classroom_id" integer) 
-  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_classroom_children_on_child_id" ON "classroom_children" ("child_id")[0m
-  [1m[35m (0.1ms)[0m  CREATE INDEX "index_classroom_children_on_classroom_id" ON "classroom_children" ("classroom_id")
-  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810170426"]]
-  [1m[35m (0.8ms)[0m  commit transaction
-Migrating to EventCategories (20130810170748)
-  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
-  [1m[35m (0.3ms)[0m  CREATE TABLE "event_categories" ("event_id" integer, "category_id" integer) 
-  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_event_categories_on_event_id" ON "event_categories" ("event_id")[0m
-  [1m[35m (0.1ms)[0m  CREATE INDEX "index_event_categories_on_category_id" ON "event_categories" ("category_id")
-  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810170748"]]
-  [1m[35m (0.8ms)[0m  commit transaction
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 
 
-Started GET "/" for 127.0.0.1 at 2013-08-10 13:11:29 -0400
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2013-08-10 12:25:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by WelcomeController#index as HTML
-  Rendered welcome/index.erb within layouts/application (2.4ms)
-Completed 200 OK in 730ms (Views: 729.5ms | ActiveRecord: 0.0ms)
+  Rendered welcome/index.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 883ms
 
+ActionView::Template::Error (cannot load such file -- coffee_script
+  (in C:/Projects/learningloop/app/assets/javascripts/educator.js.coffee)):
+    3: <head>
+    4:   <title>LearningLoop</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___348271085_42153900'
+  app/controllers/welcome_controller.rb:4:in `index'
 
-Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (19.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (32.0ms)
 
-Started GET "/assets/jquery.ui.menu.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/" for 127.0.0.1 at 2013-08-10 12:26:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.erb within layouts/application (2.0ms)
+Completed 200 OK in 1107ms (Views: 1107.1ms | ActiveRecord: 0.0ms)
 
-Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.menu.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.spinner.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.tooltip.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.spinner.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.tooltip.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/classroom.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/educator.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/parent.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/classroom.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/educator.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/parent.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:36 -0400
 
-Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:30 -0400
 
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:31 -0400
 
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:31 -0400
 
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/classroom.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:31 -0400
 
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/educator.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:31 -0400
 
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/parent.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:31 -0400
 
+Started GET "/assets/classroom.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:31 -0400
 
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-10 12:26:37 -0400
 
-Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:31 -0400
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-Migrating to CreateJoinTableClassroomsTeachers (20130810173141)
-  [1m[35m (0.1ms)[0m  begin transaction
-  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "classrooms_teachers" ("classroom_id" integer NOT NULL, "teacher_id" integer NOT NULL) [0m
-  [1m[35m (0.1ms)[0m  CREATE INDEX "index_classrooms_teachers_on_classroom_id_and_teacher_id" ON "classrooms_teachers" ("classroom_id", "teacher_id")
-  [1m[36m (0.5ms)[0m  [1mCREATE INDEX "index_classrooms_teachers_on_teacher_id_and_classroom_id" ON "classrooms_teachers" ("teacher_id", "classroom_id")[0m
-  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810173141"]]
-  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
-  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+Started GET "/" for 127.0.0.1 at 2013-08-10 13:29:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.erb within layouts/application (4.0ms)
+Completed 200 OK in 1100ms (Views: 1099.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.menu.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/classroom.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/educator.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/parent.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:35 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/classroom.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/educator.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/parent.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-10 13:29:36 -0400
+
+
+Started GET "/parent" for 127.0.0.1 at 2013-08-10 13:30:18 -0400
+
+ActionController::RoutingError (No route matches [GET] "/parent"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/ruby-1.9.2/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/ruby-1.9.2/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/ruby-1.9.2/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (58.0ms)
+
+
+Started GET "/parent/" for 127.0.0.1 at 2013-08-10 13:30:26 -0400
+
+ActionController::RoutingError (No route matches [GET] "/parent"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/ruby-1.9.2/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/ruby-1.9.2/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/ruby-1.9.2/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (19.0ms)
+
+
+Started GET "/parent/" for 127.0.0.1 at 2013-08-10 13:33:50 -0400
+
+ActionController::RoutingError (No route matches [GET] "/parent"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/ruby-1.9.2/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/ruby-1.9.2/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/ruby-1.9.2/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (25.0ms)
+
+
+Started GET "/parents/" for 127.0.0.1 at 2013-08-10 13:33:56 -0400
+
+ActionController::RoutingError (uninitialized constant ParentsController):
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__320341028__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/ruby-1.9.2/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/ruby-1.9.2/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/ruby-1.9.2/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.0ms)
+
+
+Started GET "/parent/" for 127.0.0.1 at 2013-08-10 13:34:06 -0400
+Processing by ParentController#index as HTML
+  [1m[35mParent Load (0.0ms)[0m  SELECT "parents".* FROM "parents" ORDER BY "parents"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 34ms
+
+ActionView::MissingTemplate (Missing template parent/index, application/index with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "C:/Projects/learningloop/app/views"
+):
+  app/controllers/parent_controller.rb:7:in `index'
+
+
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.0ms)
+
+
+Started GET "/family" for 127.0.0.1 at 2013-08-10 13:35:21 -0400
+Processing by FamilyController#index as HTML
+  [1m[36mParent Load (0.0ms)[0m  [1mSELECT "parents".* FROM "parents" ORDER BY "parents"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 6ms
+
+ActionView::MissingTemplate (Missing template family/index, application/index with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "C:/Projects/learningloop/app/views"
+):
+  app/controllers/family_controller.rb:7:in `index'
+
+
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.0ms)
+
+
+Started GET "/family" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+Processing by FamilyController#index as HTML
+  [1m[35mParent Load (1.0ms)[0m  SELECT "parents".* FROM "parents" ORDER BY "parents"."id" ASC LIMIT 1
+  Rendered family/index.erb within layouts/application (0.0ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.menu.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/classroom.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/educator.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/parent.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:00 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/classroom.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/educator.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/parent.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-10 13:37:01 -0400
+
+
+Started GET "/family" for 127.0.0.1 at 2013-08-10 13:38:34 -0400
+Processing by FamilyController#index as HTML
+  [1m[36mParent Load (0.0ms)[0m  [1mSELECT "parents".* FROM "parents" ORDER BY "parents"."id" ASC LIMIT 1[0m
+  Rendered family/index.erb within layouts/application (0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-10 13:38:38 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.erb within layouts/application (0.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-10 13:39:10 -0400
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 22ms
+
+SystemStackError (stack level too deep):
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:70
+
+
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-10 13:39:23 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.erb within layouts/application (0.0ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.erb within layouts/application (1.0ms)
+Completed 200 OK in 25ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.menu.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/classroom.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/educator.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/parent.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/classroom.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/educator.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/parent.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-10 13:39:45 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.erb within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.menu.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/classroom.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/educator.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/parent.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:15 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/classroom.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/educator.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/parent.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:16 -0400
+
+
+Started GET "/family" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+Processing by FamilyController#index as HTML
+  [1m[35mParent Load (0.0ms)[0m  SELECT "parents".* FROM "parents" ORDER BY "parents"."id" ASC LIMIT 1
+  Rendered family/index.erb within layouts/application (0.0ms)
+Completed 200 OK in 29ms (Views: 24.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.menu.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/classroom.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/educator.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/parent.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:19 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/classroom.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/educator.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/parent.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-10 13:40:20 -0400
+
+
+Started GET "/family" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+Processing by FamilyController#index as HTML
+  [1m[36mParent Load (0.0ms)[0m  [1mSELECT "parents".* FROM "parents" ORDER BY "parents"."id" ASC LIMIT 1[0m
+  Rendered family/index.erb within layouts/application (0.0ms)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.menu.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/classroom.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/educator.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/parent.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:19 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/classroom.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/educator.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/parent.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:20 -0400
+
+
+Started GET "/educator" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+Processing by EducatorController#index as HTML
+  [1m[35mEducator Load (0.0ms)[0m  SELECT "educators".* FROM "educators" ORDER BY "educators"."id" ASC LIMIT 1
+  Rendered educator/index.erb within layouts/application (0.0ms)
+Completed 200 OK in 30ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.ui.theme.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.core.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.menu.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.accordion.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.button.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.slider.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.base.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.all.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/classroom.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/educator.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/parent.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/classroom.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/educator.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/parent.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-10 13:41:23 -0400
