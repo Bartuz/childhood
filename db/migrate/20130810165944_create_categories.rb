@@ -6,5 +6,7 @@ class CreateCategories < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_reference :categories, :parent_category, index: true
   end
 end

@@ -1,4 +1,4 @@
-class ClassroomChildren < ActiveRecord::Migration
+class CreateJoinTableChildrenClassrooms < ActiveRecord::Migration
   def change
    create_table :children_classrooms, id: false do |t|
       t.belongs_to :child

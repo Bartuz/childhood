@@ -1,7 +1,10 @@
+<h2>My Family</h2>
 
-    <!-- Example row of columns -->
     <div class="row">
-      <h3>My Family</h3>
+
+      <h3>Kids</h3>
+      <%= link_to "Add Child", new_child_path %>
+      <%= link_to "Assign Educator", new_child_path %>
 
       <% @children.each do |child| %>
           <div class="col-lg-4">
