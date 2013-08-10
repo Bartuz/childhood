@@ -28,8 +28,9 @@ def create_child(first, last, parent, birthdate, url )
 	)
 end
 
-def create_classroom(name, description, children)
+def create_classroom(name, description, educator, children)
 	classroom = Classroom.create(:name=>name, :description=>description)
+	classroom.educators << educator
 	classroom.children << children 
 	classroom
 end
@@ -59,7 +60,7 @@ e_erin = create_educator("Erin", "Williams", "to.erin.williams@gmail.com")
 c_isla = create_child("Isla", "Rousseaux-Bridle", p_max, Date.new(2009, 6, 9), "01.jpg")
 c_orion = create_child("Orion", "Rousseaux-Bridle", p_max, Date.new(2011, 3, 29), "02.jpg")
 
-chris_class = create_classroom("Chris' Classroom", "", [ c_isla, c_orion ])
+chris_class = create_classroom("Chris' Classroom", "", [e_chris], [ c_isla, c_orion ])
 
 cat_numeracy = create_category("Numeracy", "Study of numbers")
 cat_numeration = create_category("Numeration", "", cat_numeracy)
