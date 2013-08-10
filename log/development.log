@@ -7631,3 +7631,643 @@ Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:31 -04
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-10 13:11:31 -0400
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:24:50 UTC +00:00], ["email", "max@12gsolutions.com"], ["first_name", "Maxime"], ["last_name", "Rousseaux-Bridle"], ["password", "test"], ["updated_at", Sat, 10 Aug 2013 17:24:50 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:25:18 UTC +00:00], ["email", "max@12gsolutions.com"], ["first_name", "Maxime"], ["last_name", "Rousseaux-Bridle"], ["password", "test"], ["updated_at", Sat, 10 Aug 2013 17:25:18 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "parents" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)  [["created_at", Sat, 10 Aug 2013 17:25:18 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:25:18 UTC +00:00], ["user_id", 2]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[36mParent Load (0.1ms)[0m  [1mSELECT "parents".* FROM "parents"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:26:21 UTC +00:00], ["email", "max@12gsolutions.com"], ["first_name", "Maxime"], ["last_name", "Rousseaux-Bridle"], ["password", "test"], ["updated_at", Sat, 10 Aug 2013 17:26:21 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:26:29 UTC +00:00], ["email", "max@12gsolutions.com"], ["first_name", "Maxime"], ["last_name", "Rousseaux-Bridle"], ["password", "test"], ["updated_at", Sat, 10 Aug 2013 17:26:29 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:26:29 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:26:29 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:28:21 UTC +00:00], ["email", "max@12gsolutions.com"], ["first_name", "Maxime"], ["last_name", "Rousseaux-Bridle"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:28:21 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:28:21 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:28:21 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:28:21 UTC +00:00], ["email", "canada_fish@hotmail.com"], ["first_name", "Alison"], ["last_name", "Livey Gibbins"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:28:21 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:28:21 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:28:21 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00], ["email", "max@12gsolutions.com"], ["first_name", "Maxime"], ["last_name", "Rousseaux-Bridle"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00], ["email", "canada_fish@hotmail.com"], ["first_name", "Alison"], ["last_name", "Livey Gibbins"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00], ["email", "chrisbuccella@gmail.com"], ["first_name", "Chris"], ["last_name", "Buccella"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "educators" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00], ["email", "ms.jtomas@gmail.com"], ["first_name", "Ms. J"], ["last_name", "Tomas"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "educators" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00], ["email", "to.erin.williams@gmail.com"], ["first_name", "Erin"], ["last_name", "Williams"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "educators" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:31:43 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20130810150606)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150606"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateParents (20130810150636)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "parents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_parents_on_user_id" ON "parents" ("user_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810150636"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to CreateEducators (20130810150640)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "educators" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_educators_on_user_id" ON "educators" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150640"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateChildren (20130810150835)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "children" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "parents_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_children_on_parents_id" ON "children" ("parents_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810150835"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to CreateClassrooms (20130810153852)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "classrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "educator_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_classrooms_on_educator_id" ON "classrooms" ("educator_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810153852"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEvents (20130810165638)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "notes" varchar(255), "classroom_id" integer, "child_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_events_on_classroom_id" ON "events" ("classroom_id")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_events_on_child_id" ON "events" ("child_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810165638"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCateogries (20130810165944)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "cateogries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_cateogries_on_category_id" ON "cateogries" ("category_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810165944"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to ClassroomChildren (20130810170426)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "classroom_children" ("child_id" integer, "classroom_id" integer) 
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_classroom_children_on_child_id" ON "classroom_children" ("child_id")[0m
+  [1m[35m (0.2ms)[0m  CREATE INDEX "index_classroom_children_on_classroom_id" ON "classroom_children" ("classroom_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810170426"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to EventCategories (20130810170748)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "event_categories" ("event_id" integer, "category_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_event_categories_on_event_id" ON "event_categories" ("event_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_event_categories_on_category_id" ON "event_categories" ("category_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810170748"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20130810150606)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150606"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateParents (20130810150636)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "parents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_parents_on_user_id" ON "parents" ("user_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810150636"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateEducators (20130810150640)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "educators" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_educators_on_user_id" ON "educators" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150640"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateChildren (20130810150835)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "children" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "parents_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_children_on_parents_id" ON "children" ("parents_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810150835"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to CreateClassrooms (20130810153852)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "classrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "educator_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_classrooms_on_educator_id" ON "classrooms" ("educator_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810153852"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEvents (20130810165638)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "notes" varchar(255), "classroom_id" integer, "child_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.2ms)[0m  CREATE INDEX "index_events_on_classroom_id" ON "events" ("classroom_id")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_events_on_child_id" ON "events" ("child_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810165638"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCateogries (20130810165944)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "cateogries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_cateogries_on_category_id" ON "cateogries" ("category_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810165944"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to ClassroomChildren (20130810170426)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "classroom_children" ("child_id" integer, "classroom_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_classroom_children_on_child_id" ON "classroom_children" ("child_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_classroom_children_on_classroom_id" ON "classroom_children" ("classroom_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810170426"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Migrating to EventCategories (20130810170748)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "event_categories" ("event_id" integer, "category_id" integer) 
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_event_categories_on_event_id" ON "event_categories" ("event_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_event_categories_on_category_id" ON "event_categories" ("category_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810170748"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (20.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00], ["email", "max@12gsolutions.com"], ["first_name", "Maxime"], ["last_name", "Rousseaux-Bridle"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00], ["email", "canada_fish@hotmail.com"], ["first_name", "Alison"], ["last_name", "Livey Gibbins"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00], ["email", "chrisbuccella@gmail.com"], ["first_name", "Chris"], ["last_name", "Buccella"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "educators" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00], ["email", "ms.jtomas@gmail.com"], ["first_name", "Ms. J"], ["last_name", "Tomas"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "educators" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00], ["email", "to.erin.williams@gmail.com"], ["first_name", "Erin"], ["last_name", "Williams"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "educators" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:34:49 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (6.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00], ["email", "max@12gsolutions.com"], ["first_name", "Maxime"], ["last_name", "Rousseaux-Bridle"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00]]
+  [1m[35m (29.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00], ["email", "canada_fish@hotmail.com"], ["first_name", "Alison"], ["last_name", "Livey Gibbins"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00], ["email", "chrisbuccella@gmail.com"], ["first_name", "Chris"], ["last_name", "Buccella"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "educators" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00], ["email", "ms.jtomas@gmail.com"], ["first_name", "Ms. J"], ["last_name", "Tomas"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "educators" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00], ["email", "to.erin.williams@gmail.com"], ["first_name", "Erin"], ["last_name", "Williams"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "educators" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:37:46 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20130810150606)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150606"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateParents (20130810150636)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "parents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_parents_on_user_id" ON "parents" ("user_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810150636"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateEducators (20130810150640)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "educators" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_educators_on_user_id" ON "educators" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150640"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateChildren (20130810150835)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "children" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "birthdate" date, "parent_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_children_on_parent_id" ON "children" ("parent_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810150835"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to CreateClassrooms (20130810153852)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "classrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "educator_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_classrooms_on_educator_id" ON "classrooms" ("educator_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810153852"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEvents (20130810165638)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "notes" varchar(255), "classroom_id" integer, "child_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_events_on_classroom_id" ON "events" ("classroom_id")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_events_on_child_id" ON "events" ("child_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810165638"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCateogries (20130810165944)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "cateogries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_cateogries_on_category_id" ON "cateogries" ("category_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810165944"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to ClassroomChildren (20130810170426)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "classroom_children" ("child_id" integer, "classroom_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_classroom_children_on_child_id" ON "classroom_children" ("child_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_classroom_children_on_classroom_id" ON "classroom_children" ("classroom_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810170426"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to EventCategories (20130810170748)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "event_categories" ("event_id" integer, "category_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_event_categories_on_event_id" ON "event_categories" ("event_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_event_categories_on_category_id" ON "event_categories" ("category_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810170748"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (19.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00], ["email", "max@12gsolutions.com"], ["first_name", "Maxime"], ["last_name", "Rousseaux-Bridle"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00], ["email", "canada_fish@hotmail.com"], ["first_name", "Alison"], ["last_name", "Livey Gibbins"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00], ["email", "chrisbuccella@gmail.com"], ["first_name", "Chris"], ["last_name", "Buccella"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "educators" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00], ["email", "ms.jtomas@gmail.com"], ["first_name", "Ms. J"], ["last_name", "Tomas"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "educators" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00], ["email", "to.erin.williams@gmail.com"], ["first_name", "Erin"], ["last_name", "Williams"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "educators" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "children" ("birthdate", "created_at", "first_name", "last_name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["birthdate", Tue, 09 Jun 2009], ["created_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00], ["first_name", "Isla"], ["last_name", "Rousseaux-Bridle"], ["updated_at", Sat, 10 Aug 2013 17:39:09 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20130810150606)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150606"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateParents (20130810150636)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "parents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_parents_on_user_id" ON "parents" ("user_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810150636"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Migrating to CreateEducators (20130810150640)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "educators" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_educators_on_user_id" ON "educators" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150640"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateChildren (20130810150835)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "children" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "birthdate" date, "parent_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_children_on_parent_id" ON "children" ("parent_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810150835"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to CreateClassrooms (20130810153852)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "classrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "educator_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_classrooms_on_educator_id" ON "classrooms" ("educator_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810153852"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEvents (20130810165638)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "notes" varchar(255), "classroom_id" integer, "child_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_events_on_classroom_id" ON "events" ("classroom_id")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_events_on_child_id" ON "events" ("child_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810165638"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCateogries (20130810165944)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "cateogries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_cateogries_on_category_id" ON "cateogries" ("category_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810165944"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to ClassroomChildren (20130810170426)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "classroom_children" ("child_id" integer, "classroom_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_classroom_children_on_child_id" ON "classroom_children" ("child_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_classroom_children_on_classroom_id" ON "classroom_children" ("classroom_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810170426"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Migrating to EventCategories (20130810170748)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "event_categories" ("event_id" integer, "category_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_event_categories_on_event_id" ON "event_categories" ("event_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_event_categories_on_category_id" ON "event_categories" ("category_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810170748"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (20.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:41:06 UTC +00:00], ["email", "max@12gsolutions.com"], ["first_name", "Maxime"], ["last_name", "Rousseaux-Bridle"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:41:06 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 10 Aug 2013 17:41:06 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:41:06 UTC +00:00]]
+SQLite3::ConstraintException: parents.user_id may not be NULL: INSERT INTO "parents" ("created_at", "updated_at") VALUES (?, ?)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20130810150606)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150606"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateParents (20130810150636)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "parents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_parents_on_user_id" ON "parents" ("user_id")
+  [1m[36m (1.8ms)[0m  [1m ALTER TABLE parents
+ ADD CONSTRAINT fk_parents_user
+ FOREIGN KEY (user_id)
+ REFERENCES users(id)
+[0m
+SQLite3::SQLException: near "CONSTRAINT": syntax error:       ALTER TABLE parents
+        ADD CONSTRAINT fk_parents_user
+        FOREIGN KEY (user_id)
+        REFERENCES users(id)
+
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20130810150606)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150606"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateParents (20130810150636)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "parents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_parents_on_user_id" ON "parents" ("user_id")
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20130810150606)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150606"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateParents (20130810150636)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "parents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_parents_on_user_id" ON "parents" ("user_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810150636"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Migrating to CreateEducators (20130810150640)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "educators" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_educators_on_user_id" ON "educators" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150640"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateChildren (20130810150835)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "children" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "birthdate" date, "parent_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_children_on_parent_id" ON "children" ("parent_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810150835"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to CreateClassrooms (20130810153852)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "classrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "educator_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_classrooms_on_educator_id" ON "classrooms" ("educator_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810153852"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEvents (20130810165638)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "notes" varchar(255), "classroom_id" integer, "child_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_events_on_classroom_id" ON "events" ("classroom_id")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_events_on_child_id" ON "events" ("child_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810165638"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCateogries (20130810165944)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "cateogries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_cateogries_on_category_id" ON "cateogries" ("category_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810165944"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to ClassroomChildren (20130810170426)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "classroom_children" ("child_id" integer, "classroom_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_classroom_children_on_child_id" ON "classroom_children" ("child_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_classroom_children_on_classroom_id" ON "classroom_children" ("classroom_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810170426"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to EventCategories (20130810170748)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "event_categories" ("event_id" integer, "category_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_event_categories_on_event_id" ON "event_categories" ("event_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_event_categories_on_category_id" ON "event_categories" ("category_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810170748"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (22.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00], ["email", "max@12gsolutions.com"], ["first_name", "Maxime"], ["last_name", "Rousseaux-Bridle"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "parents" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)  [["created_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00], ["email", "canada_fish@hotmail.com"], ["first_name", "Alison"], ["last_name", "Livey Gibbins"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "parents" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)  [["created_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00], ["user_id", 2]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00], ["email", "chrisbuccella@gmail.com"], ["first_name", "Chris"], ["last_name", "Buccella"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "educators" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)  [["created_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00], ["user_id", 3]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00], ["email", "ms.jtomas@gmail.com"], ["first_name", "Ms. J"], ["last_name", "Tomas"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "educators" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)  [["created_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00], ["user_id", 4]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00], ["email", "to.erin.williams@gmail.com"], ["first_name", "Erin"], ["last_name", "Williams"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "educators" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)  [["created_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00], ["user_id", 5]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "children" ("birthdate", "created_at", "first_name", "last_name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["birthdate", Tue, 09 Jun 2009], ["created_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00], ["first_name", "Isla"], ["last_name", "Rousseaux-Bridle"], ["updated_at", Sat, 10 Aug 2013 17:46:50 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20130810150606)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150606"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateParents (20130810150636)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "parents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_parents_on_user_id" ON "parents" ("user_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810150636"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to CreateEducators (20130810150640)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "educators" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_educators_on_user_id" ON "educators" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810150640"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateChildren (20130810150835)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "children" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "birthdate" date, "parent_id" integer NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_children_on_parent_id" ON "children" ("parent_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810150835"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateClassrooms (20130810153852)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "classrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "educator_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_classrooms_on_educator_id" ON "classrooms" ("educator_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810153852"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEvents (20130810165638)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "notes" varchar(255), "classroom_id" integer, "child_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_events_on_classroom_id" ON "events" ("classroom_id")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_events_on_child_id" ON "events" ("child_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130810165638"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCateogries (20130810165944)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "cateogries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_cateogries_on_category_id" ON "cateogries" ("category_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810165944"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to ClassroomChildren (20130810170426)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "classroom_children" ("child_id" integer, "classroom_id" integer) 
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_classroom_children_on_child_id" ON "classroom_children" ("child_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_classroom_children_on_classroom_id" ON "classroom_children" ("classroom_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810170426"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Migrating to EventCategories (20130810170748)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "event_categories" ("event_id" integer, "category_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_event_categories_on_event_id" ON "event_categories" ("event_id")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_event_categories_on_category_id" ON "event_categories" ("category_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130810170748"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (21.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00], ["email", "max@12gsolutions.com"], ["first_name", "Maxime"], ["last_name", "Rousseaux-Bridle"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "parents" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)  [["created_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00], ["email", "canada_fish@hotmail.com"], ["first_name", "Alison"], ["last_name", "Livey Gibbins"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "parents" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)  [["created_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00], ["user_id", 2]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00], ["email", "chrisbuccella@gmail.com"], ["first_name", "Chris"], ["last_name", "Buccella"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "educators" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)  [["created_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00], ["user_id", 3]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00], ["email", "ms.jtomas@gmail.com"], ["first_name", "Ms. J"], ["last_name", "Tomas"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "educators" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)  [["created_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00], ["user_id", 4]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00], ["email", "to.erin.williams@gmail.com"], ["first_name", "Erin"], ["last_name", "Williams"], ["password", "password"], ["updated_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "educators" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)  [["created_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00], ["updated_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00], ["user_id", 5]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "children" ("birthdate", "created_at", "first_name", "last_name", "parent_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["birthdate", Tue, 09 Jun 2009], ["created_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00], ["first_name", "Isla"], ["last_name", "Rousseaux-Bridle"], ["parent_id", 1], ["updated_at", Sat, 10 Aug 2013 17:47:56 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction

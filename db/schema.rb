@@ -26,12 +26,13 @@ ActiveRecord::Schema.define(version: 20130810170748) do
   create_table "children", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.integer  "parents_id"
+    t.date     "birthdate"
+    t.integer  "parent_id",  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "children", ["parents_id"], name: "index_children_on_parents_id"
+  add_index "children", ["parent_id"], name: "index_children_on_parent_id"
 
   create_table "classroom_children", id: false, force: true do |t|
     t.integer "child_id"
@@ -50,7 +51,7 @@ ActiveRecord::Schema.define(version: 20130810170748) do
   add_index "classrooms", ["educator_id"], name: "index_classrooms_on_educator_id"
 
   create_table "educators", force: true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -78,7 +79,7 @@ ActiveRecord::Schema.define(version: 20130810170748) do
   add_index "events", ["classroom_id"], name: "index_events_on_classroom_id"
 
   create_table "parents", force: true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
