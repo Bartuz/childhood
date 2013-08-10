@@ -24,4 +24,4 @@ production:
   database: learning_loop
   pool: 5
   username: learning_loop
-  password:
+  password: learning_loop
