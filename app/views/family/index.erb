@@ -6,7 +6,9 @@
       <% @children.each do |child| %>
           <div class="col-lg-4">
             <h2><%= child.first_name %></h2>
-            <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+            <%= image_tag asset_path "avatars/01.jpg" %>
+
+            <p><%= link_to "Details", child %></p>
           </div>
 
       <% end %>

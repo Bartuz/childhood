@@ -14,6 +14,7 @@ LearningLoop::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
      resources :family
      resources :educator
+     resources :children
 
   # Example resource route with options:
   #   resources :products do

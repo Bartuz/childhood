@@ -1,4 +1,4 @@
-class Child < ActiveRecord::Base
+class Children < ActiveRecord::Base
 	belongs_to :parent
 	has_and_belongs_to_many :classrooms
 end
