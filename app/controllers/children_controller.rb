@@ -1,4 +1,4 @@
-class ChildController < ApplicationController
+class ChildrenController < ApplicationController
 
   def show
 

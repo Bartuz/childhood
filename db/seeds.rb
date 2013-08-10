@@ -18,12 +18,13 @@ def create_educator(first, last, email)
   Educator.create( :user=>create_user(first, last, email) )
 end
 
-def create_child(first, last, parent, birthdate )
+def create_child(first, last, parent, birthdate, url )
 	Child.create(
 		:first_name=>first, 
 		:last_name=>last,
 		:parent=>parent,
-		:birthdate=>birthdate
+		:birthdate=>birthdate,
+    :picutre_url=>url
 	)
 end
 
@@ -55,8 +56,8 @@ e_chris = create_educator("Chris", "Buccella", "chrisbuccella@gmail.com")
 e_mtomas = create_educator("Ms. J", "Tomas", "ms.jtomas@gmail.com")
 e_erin = create_educator("Erin", "Williams", "to.erin.williams@gmail.com")
 
-c_isla = create_child("Isla", "Rousseaux-Bridle", p_max, Date.new(2009, 6, 9))
-c_orion = create_child("Orion", "Rousseaux-Bridle", p_max, Date.new(2011, 3, 29))
+c_isla = create_child("Isla", "Rousseaux-Bridle", p_max, Date.new(2009, 6, 9), "01.jpg")
+c_orion = create_child("Orion", "Rousseaux-Bridle", p_max, Date.new(2011, 3, 29), "02.jpg")
 
 chris_class = create_classroom("Chris' Classroom", "", [ c_isla, c_orion ])
 
