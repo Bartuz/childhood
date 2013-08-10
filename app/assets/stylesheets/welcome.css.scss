@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 body, html, h1,h2,h3,h4,h5,h6{padding:0; margin:0; line-height:100%; font-family:Open Sans}
 
 body{background:url('homepage/bg.jpg'); padding-bottom:150px}
@@ -13,20 +14,14 @@ header{width:900px; margin: 0 auto; position:absolute; top:20px; left:50px}
 nav{position:absolute; right:0; top:30px}
 nav a:link, nav a:visited{color:#222; font-weight:bolder; font-size:12px; margin-right:10px; text-decoration:none;}
 
+=======
+>>>>>>> ffa3878be1649b650cba6bb771efaf793a360685
 .hero-bg{height:360px; top:120px; width:100%; position:absolute; z-index:-1; background:#fff;}
 
 #hero-unit{width:900px; background-image:url('homepage/parent_with_daughter.jpg'); background-position:390px 0; background-repeat:no-repeat; background-color:#fff; height:300px; padding: 40px 0 0 50px}
 .hero-blurb{}
 .hero-blurb h1{color:#78bec0; font-weight:lighter;}
 .hero-text{font-size:14px; line-height:24px; width:340px; margin: 20px 0}
-
-#pre-footer{ position:absolute; width:100%; z-index:-2; clear:both;display:block; width:100%; background:#d4ec89;}
-.footer-links{height:120px; right:0; display:block; padding: 10px 0 0 0}
-.footer-links a:link,
-.footer-links a:visited{text-decoration:none; color:#222; display:block; right:0; width:100px; margin-left: 800px; text-align:right; opacity: 0.6; font-weight:bold; padding:3px 50px 1px 50px; font-size:12px}
-.footer-logo img{position:absolute; bottom:0; top:50px; left:50px}
-footer{clear:both;background:#222; color:#fff; font-size:10px; padding: 10px 0; width:100%; z-index:-100; margin-top:130px; z-index:-10px; position:absolute}
-footer .footer-copy{text-align:right; max-width:950px}
 
 
 .select-role{padding: 30px 0 30px 50px}

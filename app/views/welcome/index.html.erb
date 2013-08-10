@@ -14,8 +14,8 @@
 
   <div class="select-role">
     <h3>To start, please pick your role:</h3>
-    <a href="#" class="edu">Educator</a>
-    <a href="#" class="par">Parent/Caregiver</a>
+    <%= link_to "Educator", controller: "educators", :class=>"edu" %>
+    <%= link_to "Parent/Caregiver", controller: "families", :class=>"par" %>
   </div>
   
   <div class="value">

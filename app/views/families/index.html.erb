@@ -1,19 +1,19 @@
 <h2>My Family</h2>
 
-    <div class="row">
+<div id="content">
 
-      <h3>Kids</h3>
-      <%= link_to "Add Child", new_child_path %>
-      <%= link_to "Assign Educator", new_child_path %>
+    <h3>Kids</h3>
+    <%= link_to "Add Child", new_child_path %>
+    <%= link_to "Assign Educator", new_child_path %>
 
-      <% @children.each do |child| %>
-          <div class="col-lg-4">
-            <h2><%= child.first_name %></h2>
-            <%= image_tag asset_path "avatars/" + child.picutre_url %>
+    <% @children.each do |child| %>
+        <div class="col-lg-4">
+          <h2><%= child.first_name %></h2>
+          <%= image_tag asset_path "avatars/" + child.picutre_url %>
 
-            <p><%= link_to "Details", child %></p>
-          </div>
+          <p><%= link_to "Details", child %></p>
+        </div>
 
-      <% end %>
+    <% end %>
 
-    </div>
+</div>
