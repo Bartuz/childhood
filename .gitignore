@@ -1,3 +1,5 @@
 tmp
 /.idea/
 log/*.log
+db/schema.rb
+db/development.sqlite3
