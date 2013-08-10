@@ -1,3 +1,36 @@
-// Place all the styles related to the families controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.add-child {
+	margin-left:31px;
+}
+
+ul.children {
+
+	clear:both;
+	padding:0px;
+	margin:31px 0px;
+	list-style:none;
+	
+	li {
+		display:block;
+		float:left;
+	}
+}
+
+section.child {
+
+	padding:0px 12px;
+	margin-right:12px;		
+	background: #FFF;
+	text-align:center;
+	border-radius:12px;
+	
+	h4 {
+		padding:4px 0px;
+	}
+	img {
+		border:solid 2px $teal;
+		box-shadow: 1px 1px 1px #CCC;
+	}
+}
+
+section.tools {
+}
