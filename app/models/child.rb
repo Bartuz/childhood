@@ -1,4 +1,4 @@
 class Child < ActiveRecord::Base
-	has_many :educators
-	has_one :parent
+	belongs_to :parent
+	has_and_belongs_to_many :classrooms
 end
