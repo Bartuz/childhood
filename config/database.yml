@@ -21,7 +21,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: learning_loop
+  database: ddhuq27msgv4on
   pool: 5
-  username: learning_loop
-  password: learning_loop
+  username: dcszhipjrhlagi
+  password: gCUt2A4WAQ_rX53MW96Y4DoDAl
