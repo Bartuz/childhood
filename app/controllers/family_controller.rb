@@ -2,7 +2,7 @@ class FamilyController < ApplicationController
 
 	def index
 
-		@parent = Parent.first
+		@children = Parent.first.children.all
 		
 	    respond_to do |format|
 	      format.html # index.html.erb
