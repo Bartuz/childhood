@@ -1,4 +1,4 @@
-class ParentController < ApplicationController
+class FamilyController < ApplicationController
 
 	def index
 
