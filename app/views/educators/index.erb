@@ -9,7 +9,7 @@
         <h2><%= child.first_name %></h2>
         <%= image_tag asset_path "avatars/" + child.picutre_url %>
 
-        <p><%= link_to "Details", child_activity_Path %></p>
+        <p><%= link_to "Details", activity_child_path(child.id) %></p>
       </div>
 
   <% end %>

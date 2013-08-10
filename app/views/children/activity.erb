@@ -1,8 +1,79 @@
 <div class="row">
   <h3>Class List > <%= @child.first_name %></h3>
+    <ul class="media-list">
+      <li class="media">
+        <a class="pull-left" href="#"><%= image_tag(asset_path "avatars/" + @child.picutre_url) %> </a>
+        <div class="media-body">
+          <dl class="dl-horizontal">
 
-  <div class="col-lg-4">
-    <%= image_tag asset_path "avatars/" + @child.picutre_url %>
-  </div>
+            <dd></dd>
+            <dt>Name</dt>
+            <dd><%= @child.first_name %> <%= @child.last_name %></dd>
 
+            <dt>Registration</dt>
+            <dd><%= @child.created_at %></dd>
+
+            <dt>Date of Birth</dt>
+            <dd><%= @child.birthdate %></dd>
+
+            <dt>Health Concerns</dt>
+            <dd>None</dd>
+
+            <dt>Address</dt>
+            <dd></dd>
+
+            <dt>Caregiver/Parent 1</dt>
+            <dd></dd>
+
+            <dt>Caregiver/Parent 2</dt>
+            <dd></dd>
+          </dl>
+        </div>
+      </li>
+    </ul>
 </div>
+
+<div class="row">
+      <div class="col-4">
+            something
+        </div>
+      <div class="col-6">
+
+      <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#activity">Log Observation</a>
+      </li>
+    </ul>
+        <div id="myTabContent" class="tab-content">
+      <div class="tab-pane fade active in" id="activity">
+        <form class="form-horizontal">
+          <fieldset>
+            <div class="form-group">
+              <label for="domain">Domain</label>
+              <input type="text" class="form-control" id="domain" placeholder="Select a Domain">
+            </div>
+            <div class="form-group">
+              <label for="skill">Skill</label>
+              <input type="text" class="form-control" id="skill" placeholder="Select a Skill">
+            </div>
+            <div class="form-group">
+              <label for="indicator">Indicator</label>
+              <input type="text" class="form-control" id="indicator" placeholder="Enter an Indicator">
+            </div>
+            <div class="form-group">
+              <label for="observation">Observation</label>
+              <input type="text" class="form-control" id="observation" placeholder="Enter an Observation">
+            </div>
+            <div class="form-group">
+              <label for="interpretation">Interpretation</label>
+              <input type="text" class="form-control" id="interpretation">
+            </div>
+            <button type="submit" class="btn btn-default">Publish Observation</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+      </div>
+    </div>
+
