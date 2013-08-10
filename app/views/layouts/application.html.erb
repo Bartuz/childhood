@@ -5,26 +5,31 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
+  <div id="header">
     <div class="header-bg"></div>
     <div class="tagline-bg"></div>
     <div class="hero-bg"></div>
-      <header>
-        <%= link_to root_path  do%>
-          <div class="logo"></div>
-        <% end %>
-          <nav>
-            <a href="#">Privacy</a>
-            <a href="#">Pricing</a>
-            <a href="#">Support</a>
-          </nav>
-          <div class="tagline">
-              Linking families with educators
-          </div>
-      </header>
+    <header>
+      <%= link_to root_path  do%>
+        <div class="logo"></div>
+      <% end %>
+        <nav>
+          <a href="#">Privacy</a>
+          <a href="#">Pricing</a>
+          <a href="#">Support</a>
+        </nav>
+        <div class="tagline">
+            Linking families with educators
+        </div>
+    </header>
+  </div>
             
-		  <%= yield %>
+      <div class="content-container">
+		    <%= yield %>
+      </div>
 
         <div id="pre-footer">
           <div class="footer-links">
