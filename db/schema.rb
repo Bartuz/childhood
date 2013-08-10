@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20130810181701) do
+=======
+ActiveRecord::Schema.define(version: 20130810173141) do
+>>>>>>> 389aa46791bfcb9f32cb2101dc448719a23b6db6
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -67,6 +71,11 @@ ActiveRecord::Schema.define(version: 20130810181701) do
 
   add_index "educators", ["user_id"], name: "index_educators_on_user_id"
 
+  create_table "event_categories", id: false, force: true do |t|
+    t.integer "event_id"
+    t.integer "category_id"
+  end
+
   create_table "events", force: true do |t|
     t.string   "title"
     t.string   "notes"
@@ -78,14 +87,6 @@ ActiveRecord::Schema.define(version: 20130810181701) do
 
   add_index "events", ["child_id"], name: "index_events_on_child_id"
   add_index "events", ["classroom_id"], name: "index_events_on_classroom_id"
-
-  create_table "events_categories", id: false, force: true do |t|
-    t.integer "event_id"
-    t.integer "category_id"
-  end
-
-  add_index "events_categories", ["category_id"], name: "index_events_categories_on_category_id"
-  add_index "events_categories", ["event_id"], name: "index_events_categories_on_event_id"
 
   create_table "parents", force: true do |t|
     t.integer  "user_id",    null: false
