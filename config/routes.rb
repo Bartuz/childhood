@@ -13,9 +13,8 @@ LearningLoop::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
      resources :families
-     resources :educator
+     resources :educators
      resources :children
-
   # Example resource route with options:
   #   resources :products do
   #     member do
@@ -29,10 +28,11 @@ LearningLoop::Application.routes.draw do
   #   end
 
   # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
+     resources :children do
+       member do
+         get 'activity'
+       end
+     end
 
   # Example resource route with more complex sub-resources:
   #   resources :products do

@@ -1,8 +1,8 @@
-class EducatorController < ApplicationController
+class EducatorsController < ApplicationController
 	def index
 
-		@educator = Educator.first
-		
+		@class = Educator.first.classrooms.first
+    @children = @class.children.all
 	    respond_to do |format|
 	      format.html # index.html.erb
 	      format.json { render json: @project_hash }
