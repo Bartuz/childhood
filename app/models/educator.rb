@@ -1,4 +1,4 @@
 class Educator < ActiveRecord::Base
 	has_one :user
-	has_many :children
+	has_many :classrooms
 end

@@ -6,4 +6,5 @@ class WelcomeController < ApplicationController
 	      format.json { render json: @project_hash }
 	    end
 	end
+
 end
