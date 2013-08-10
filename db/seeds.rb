@@ -43,8 +43,7 @@ end
 
 def create_event(title, notes, classroom, child, categories)
 	event = Event.create(:title=>title, :notes=>notes, :classroom=>classroom, :child=>child)
-	puts categories
-	event.categories << categories
+	event.categories = categories
 	event
 end
 
@@ -68,12 +67,12 @@ cat_sorting = create_category("sorting", cat_numeracy)
 cat_data_management = create_category("data management", cat_numeracy)
 cat_measurement = create_category("measurment", cat_numeracy)
 
-# create_event("Numerations", "A description", chris_class, c_isla, 
-# 	[cat_numeration, cat_pattern]
-# )
-# create_event("Sorting Stuff", "A description", chris_class, c_isla, 
-# 	[cat_sorting]
-# )
-# create_event("Data Play", "A description", chris_class, c_isla, 
-# 	[cat_data_management]
-# )
+create_event("Numerations", "A description", chris_class, c_isla, 
+	[cat_numeration, cat_pattern]
+)
+create_event("Sorting Stuff", "A description", chris_class, c_isla, 
+	[cat_sorting]
+)
+create_event("Data Play", "A description", chris_class, c_isla, 
+	[cat_data_management]
+)

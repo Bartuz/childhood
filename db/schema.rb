@@ -66,6 +66,11 @@ ActiveRecord::Schema.define(version: 20130810182752) do
 
   add_index "educators", ["user_id"], name: "index_educators_on_user_id"
 
+  create_table "event_categories", id: false, force: true do |t|
+    t.integer "event_id"
+    t.integer "category_id"
+  end
+
   create_table "events", force: true do |t|
     t.string   "title"
     t.string   "notes"
@@ -77,11 +82,6 @@ ActiveRecord::Schema.define(version: 20130810182752) do
 
   add_index "events", ["child_id"], name: "index_events_on_child_id"
   add_index "events", ["classroom_id"], name: "index_events_on_classroom_id"
-
-  create_table "events_categories", id: false, force: true do |t|
-    t.integer "event_id"
-    t.integer "category_id"
-  end
 
   create_table "parents", force: true do |t|
     t.integer  "user_id",    null: false
