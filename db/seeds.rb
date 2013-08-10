@@ -18,30 +18,34 @@ def create_educator(first, last, email)
   Educator.create( :user=>create_user(first, last, email) )
 end
 
-def create_child(first, last, parent, birthdate )
+def create_child(first, last, parent, birthdate, url )
 	Child.create(
 		:first_name=>first, 
 		:last_name=>last,
 		:parent=>parent,
-		:birthdate=>birthdate
+		:birthdate=>birthdate,
+    :picutre_url=>url
 	)
 end
 
 def create_classroom(name, description, children)
 	classroom = Classroom.create(:name=>name, :description=>description)
-	children.each do |child|
-		classroom.children << child 
+	classroom.children << children 
+	classroom
+end
+
+def create_category(name, description, parent=nil)
+	if(parent)
+		Category.create(:name=>name, :description=>description, :parent_category=>parent)
+	else
+		Category.create(:name=>name, :description=>description)
 	end
 end
 
-def create_category()
-end
-
-def create_event(title, description, classroom, child, categories)
-	event = Event.create(:title=>title, :description=>description, :classroom=>classroom, :child=>child)
-	categories.each do |cat|
-		event.categories.create(cat)
-	end
+def create_event(title, notes, classroom, child, categories)
+	event = Event.create(:title=>title, :notes=>notes, :classroom=>classroom, :child=>child)
+	event.categories = categories
+	event
 end
 
 
@@ -52,10 +56,24 @@ e_chris = create_educator("Chris", "Buccella", "chrisbuccella@gmail.com")
 e_mtomas = create_educator("Ms. J", "Tomas", "ms.jtomas@gmail.com")
 e_erin = create_educator("Erin", "Williams", "to.erin.williams@gmail.com")
 
-c_isla = create_child("Isla", "Rousseaux-Bridle", p_max, Date.new(2009, 6, 9))
-c_orion = create_child("Orion", "Rousseaux-Bridle", p_max, Date.new(2011, 3, 29))
+c_isla = create_child("Isla", "Rousseaux-Bridle", p_max, Date.new(2009, 6, 9), "01.jpg")
+c_orion = create_child("Orion", "Rousseaux-Bridle", p_max, Date.new(2011, 3, 29), "02.jpg")
 
 chris_class = create_classroom("Chris' Classroom", "", [ c_isla, c_orion ])
 
-# create_event("My Event", "A description", chris_class, c_isla, [
-# 	])
+cat_numeracy = create_category("Numeracy", "Study of numbers")
+cat_numeration = create_category("Numeration", "", cat_numeracy)
+cat_pattern = create_category("Patterns", "", cat_numeracy)
+cat_sorting = create_category("sorting", cat_numeracy)
+cat_data_management = create_category("data management", cat_numeracy)
+cat_measurement = create_category("measurment", cat_numeracy)
+
+create_event("Numerations", "A description", chris_class, c_isla, 
+	[cat_numeration, cat_pattern]
+)
+create_event("Sorting Stuff", "A description", chris_class, c_isla, 
+	[cat_sorting]
+)
+create_event("Data Play", "A description", chris_class, c_isla, 
+	[cat_data_management]
+)
