@@ -1,0 +1,17 @@
+<h2>Class List</h2>
+
+<div class="row">
+  <%= link_to "Add New Child", new_child_path %>
+  <%= link_to "Edit Class List", new_child_path %>
+
+  <% @children.each do |child| %>
+      <div class="col-lg-4">
+        <h2><%= child.first_name %></h2>
+        <%= image_tag asset_path "avatars/" + child.picutre_url %>
+
+        <p><%= link_to "Details", child_activity_Path %></p>
+      </div>
+
+  <% end %>
+
+</div>
