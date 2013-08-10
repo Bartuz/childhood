@@ -29,19 +29,23 @@ end
 
 def create_classroom(name, description, children)
 	classroom = Classroom.create(:name=>name, :description=>description)
-	children.each do |child|
-		classroom.children << child 
+	classroom.children << children 
+	classroom
+end
+
+def create_category(name, description, parent=nil)
+	if(parent)
+		Category.create(:name=>name, :description=>description, :parent_category=>parent)
+	else
+		Category.create(:name=>name, :description=>description)
 	end
 end
 
-def create_category()
-end
-
-def create_event(title, description, classroom, child, categories)
-	event = Event.create(:title=>title, :description=>description, :classroom=>classroom, :child=>child)
-	categories.each do |cat|
-		event.categories.create(cat)
-	end
+def create_event(title, notes, classroom, child, categories)
+	event = Event.create(:title=>title, :notes=>notes, :classroom=>classroom, :child=>child)
+	puts categories
+	event.categories << categories
+	event
 end
 
 
@@ -57,5 +61,19 @@ c_orion = create_child("Orion", "Rousseaux-Bridle", p_max, Date.new(2011, 3, 29)
 
 chris_class = create_classroom("Chris' Classroom", "", [ c_isla, c_orion ])
 
-# create_event("My Event", "A description", chris_class, c_isla, [
-# 	])
+cat_numeracy = create_category("Numeracy", "Study of numbers")
+cat_numeration = create_category("Numeration", "", cat_numeracy)
+cat_pattern = create_category("Patterns", "", cat_numeracy)
+cat_sorting = create_category("sorting", cat_numeracy)
+cat_data_management = create_category("data management", cat_numeracy)
+cat_measurement = create_category("measurment", cat_numeracy)
+
+# create_event("Numerations", "A description", chris_class, c_isla, 
+# 	[cat_numeration, cat_pattern]
+# )
+# create_event("Sorting Stuff", "A description", chris_class, c_isla, 
+# 	[cat_sorting]
+# )
+# create_event("Data Play", "A description", chris_class, c_isla, 
+# 	[cat_data_management]
+# )

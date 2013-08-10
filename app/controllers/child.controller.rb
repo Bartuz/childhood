@@ -1,8 +1,8 @@
-class ChildrenController < ApplicationController
+class ChildController < ApplicationController
 
   def show
 
-    @child = Children.find(params[:id])
+    @child = Child.find(params[:id])
 
     respond_to do |format|
       format.html # index.html.erb

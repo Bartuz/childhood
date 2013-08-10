@@ -11,37 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130810173141) do
+ActiveRecord::Schema.define(version: 20130810182752) do
 
-  create_table "cateogries", force: true do |t|
-    t.string   "name"
+  create_table "categories", force: true do |t|
+    t.string   "name",               null: false
     t.string   "description"
-    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "parent_category_id"
   end
 
-  add_index "cateogries", ["category_id"], name: "index_cateogries_on_category_id"
+  add_index "categories", ["parent_category_id"], name: "index_categories_on_parent_category_id"
 
   create_table "children", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.integer  "parents_id"
+    t.string   "first_name",  null: false
+    t.string   "last_name",   null: false
+    t.date     "birthdate",   null: false
+    t.integer  "parent_id",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picutre_url"
   end
 
-  add_index "children", ["parents_id"], name: "index_children_on_parents_id"
+  add_index "children", ["parent_id"], name: "index_children_on_parent_id"
 
-  create_table "classroom_children", id: false, force: true do |t|
+  create_table "children_classrooms", id: false, force: true do |t|
     t.integer "child_id"
     t.integer "classroom_id"
   end
 
-  add_index "classroom_children", ["child_id"], name: "index_classroom_children_on_child_id"
-  add_index "classroom_children", ["classroom_id"], name: "index_classroom_children_on_classroom_id"
-
   create_table "classrooms", force: true do |t|
+    t.string   "name",        null: false
+    t.string   "description"
     t.integer  "educator_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -58,7 +59,7 @@ ActiveRecord::Schema.define(version: 20130810173141) do
   add_index "classrooms_teachers", ["teacher_id", "classroom_id"], name: "index_classrooms_teachers_on_teacher_id_and_classroom_id"
 
   create_table "educators", force: true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -82,11 +83,8 @@ ActiveRecord::Schema.define(version: 20130810173141) do
     t.integer "category_id"
   end
 
-  add_index "events_categories", ["category_id"], name: "index_events_categories_on_category_id"
-  add_index "events_categories", ["event_id"], name: "index_events_categories_on_event_id"
-
   create_table "parents", force: true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -94,10 +92,10 @@ ActiveRecord::Schema.define(version: 20130810173141) do
   add_index "parents", ["user_id"], name: "index_parents_on_user_id"
 
   create_table "users", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
-    t.string   "password"
+    t.string   "first_name", null: false
+    t.string   "last_name",  null: false
+    t.string   "email",      null: false
+    t.string   "password",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
