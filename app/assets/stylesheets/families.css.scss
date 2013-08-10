@@ -1,23 +1,28 @@
+.add-caregiver,
 .add-child {
 	margin-left:31px;
 }
 
-ul.children {
+div.people {
 
 	clear:both;
-	padding:0px;
-	margin:31px 0px;
-	list-style:none;
-	
-	li {
-		display:block;
-		float:left;
+	margin-bottom:31px;
+
+	ul {
+		padding:0px;
+		list-style:none;
+		margin:31px 0px;
+		
+		li {
+			display:block;
+			float:left;
+		}
 	}
 }
 
-section.child {
+section.person {
 
-	padding:0px 12px;
+	padding-bottom:12px;
 	margin-right:12px;		
 	background: #FFF;
 	text-align:center;
@@ -26,11 +31,24 @@ section.child {
 	h4 {
 		padding:4px 0px;
 	}
+
+	a {
+		text-decoration:none;
+	}
+
 	img {
-		border:solid 2px $teal;
-		box-shadow: 1px 1px 1px #CCC;
+		// border:solid 2px $teal;
+		// box-shadow: 1px 1px 1px #CCC;
+	}
+
+	&:hover {
+		background-color:$lime;
 	}
 }
 
 section.tools {
+	padding:7px;
+}
+
+div.caregivers {
 }

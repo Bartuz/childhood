@@ -42,8 +42,11 @@ h2 {
 	color: $teal; 
 	margin-bottom: 31px;
 }
-// h3 { color: $teal; }
 
+h3 {
+  color: $teal;
+  font-weight:200;
+}
 .content-container {
 	padding:$left_margin;
 	line-height:1.2em;

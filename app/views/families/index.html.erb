@@ -1,25 +1,29 @@
 <h2>My Family</h2>
 
-<h3>Children <%= link_to "Add New Child", new_child_path, :class=>"button add-child" %></h3>
+<div class="people">
+  <h3>Children <%= link_to "Add New Child", new_child_path, :class=>"button add-child" %></h3>
 
-<ul class="children">
-<% @children.each do |child| %>
-    <li>
-      <article>
-        <section class="child">
-          <header>
-            <h4><%= child.first_name %></h4>
-          </header>
-          <%= image_tag(asset_path("avatars/" + child.picutre_url)) %>
-        </section>
-        <section class="tools">
-          <a href="#"><i class="icon-pencil"></i></a>
-        </section>
-      </article>
-    </li>
-<% end %>
-</ul>
+  <ul>
+  <% @children.each do |child| %>
+      <li>
+        <article>
+          <section class="person">
+            <a href="<%= child_path( child ) %>">
+              <header>
+                <h4><%= child.first_name %></h4>
+              </header>
+              <%= image_tag(asset_path("avatars/" + child.picutre_url)) %>
+            </a>
+          </section>
+          <section class="tools">
+            <a href="<%= child_path( child ) %>"><i class="icon-zoom-in"></i></a>
+            <a href="#"><i class="icon-plus-sign"></i></a>
+            <a href="#"><i class="icon-remove-sign"></i></a>
+          </section>
+        </article>
+      </li>
+  <% end %>
+  </ul>
+  <div class="clearfix"></div>
 
-<!-- <%= link_to "Assign Educator", new_child_path %> -->
-
-<div class="clearfix"></div>
+</div>
