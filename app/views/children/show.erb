@@ -5,4 +5,36 @@
     <%= image_tag asset_path "avatars/" + @child.picutre_url %>
   </div>
 
+  <div class="profile">
+  	<dl>
+  		<dt>Name</dt>
+  		<dd></dd>
+  		<dt>Registration</dt>
+  		<dd></dd>
+  		<dt>Date of Birth</dt>
+  		<dd><%= @child.birthdate.strftime("%B %d, %Y") %></dd>
+  	</dl>
+  </div>
+
+
+<div id="timeline-embed">
+  <div id="timeline"></div>
+</div>
+  <script type="text/javascript">
+	$(document).ready(function() {
+
+		var timeline = <%= child_timeline_json(@child) %>
+
+	    createStoryJS({
+	    	type: "timeline",
+			width:      '100%',
+			height:     '400',
+			js: '/assets/timeline.js',
+			css:  '/assets/timeline.css',
+			source: timeline,
+			embed_id:   'timeline-embed',
+			debug: true
+		});
+	});
+  </script>
 </div>
