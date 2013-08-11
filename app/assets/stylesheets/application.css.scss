@@ -1,6 +1,7 @@
 
 @import "bourbon";
 @import "bootstrap.min";
+@import "bootstrap-responsive.min";
 @import "fonts";
 
 $lime : #d4ec89;
@@ -13,6 +14,7 @@ $left_margin : 50px;
 @import "families";
 @import "parent";
 @import "welcome";
+@import "children";
 
 
 h2 { 
