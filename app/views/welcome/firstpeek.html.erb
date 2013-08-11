@@ -1,0 +1,139 @@
+<style type="text/css">
+.note-right{
+	float: right;
+	width: 400px;
+	height:auto;
+}
+.note-left{
+	float: left;
+	width: 400px;
+	height:auto;
+}
+#myCarousel {
+	float: right;
+	width: 300px;
+	margin-bottom: 30px;
+	margin-right: 36px;
+}
+.media-container{
+	margin: 20px;
+	width:400px;
+	height:533px;
+	display: inline-block;
+	background-size: cover;
+	position: relative;
+}
+.media-container p {
+	position: absolute;
+	background-color: rgba(0,0,0,.7);
+	width:100%;
+	height:100px;
+	color:white;
+	bottom: 0;
+	margin: 0;
+	line-height: 100px;
+	text-align: center;
+}
+section h3{
+	font-size:30px;
+}
+section p{
+	font-size:22px;
+	line-height: 28px;
+}
+#pic1{
+	background-image: url('assets/firstpeek/garden.JPG');
+}
+#pic2{
+	background-image: url('assets/firstpeek/girlbucket.jpeg');
+}
+#pic3{
+	background-image: url('assets/firstpeek/parentll.jpeg');
+}
+#pic4{
+	background-image: url('assets/firstpeek/parentll2.jpeg');
+}
+#pic5{
+	background-image: url('assets/firstpeek/jesskids2.jpeg');
+}
+#pic6{
+	background-image: url('assets/firstpeek/llmobile.jpeg');
+}
+
+</style>
+<div class="value-cont">
+	<div class="hero-blurb page-about-us" style="margin: 0 auto; width:900px;">
+		<article class="note-left">
+			<section></br></br></br></br></br></br></br>
+				<h3>First Peek</h3>
+				<p>
+					We rolled out a beta version of Learning Loop today with a great group of early childhood educators, parents, and kids!
+				</p>
+			</article>
+			<div id="myCarousel" class="carousel slide">
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+					<li data-target="#myCarousel" data-slide-to="3"></li>
+					<li data-target="#myCarousel" data-slide-to="4"></li>
+					<li data-target="#myCarousel" data-slide-to="5"></li>
+				</ol>
+				<!-- Carousel items -->
+				<div class="carousel-inner">
+					<div class="active item"><%= image_tag asset_path("firstpeek/girlbucket.jpeg") %> </div>
+					<div class="item"><%= image_tag asset_path("firstpeek/jesskids.jpeg") %> </div>
+					<div class="item"><%= image_tag asset_path("firstpeek/llmobile.jpeg") %> </div>
+					<div class="item"><%= image_tag asset_path("firstpeek/parentll.jpeg") %> </div>
+					<div class="item"><%= image_tag asset_path("firstpeek/erin.jpeg") %> </div>
+					<div class="item"><%= image_tag asset_path("firstpeek/garden.JPG") %> </div>
+				</div>
+				<!-- Carousel nav -->
+				<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+				<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+
+			</div>
+			<div class="clearfix"></div>
+
+		</section>
+	</div>
+</div>
+<div class="peek-page hero-blurb page-about-us" style="margin: 0 auto; width:900px;">
+	<div id="pic1" class="media-container">
+<p>Playing in the garden</p>
+	</div>
+	<div id="pic2" class="media-container">
+<p>Scooping soil into a bucket</p>
+	</div>
+	<div id="pic4" class="media-container">
+<p>Parent checking out Learning Loop</p>
+	</div>
+	<div id="pic5" class="media-container">
+<p>Water play with cups and bubbles</p>
+	</div>
+	<div id="pic6" class="media-container">
+<p>Submitting our observations live</p>
+	</div>
+
+	<video class="media-container" controls>
+  <source src="assets/firstpeek/Video.mov" type="video/mov">
+
+</video>
+
+
+	<video src="assets/firstpeek/Video.MOV" class="media-container"></video>
+
+<!-- 	<%= image_tag asset_path("firstpeek/parentll.jpeg") %>	
+	<%= image_tag asset_path("firstpeek/parentll.jpeg") %>	
+	<%= image_tag asset_path("firstpeek/parentll.jpeg") %>	
+	<%= image_tag asset_path("firstpeek/parentll.jpeg") %>	
+	<%= image_tag asset_path("firstpeek/parentll.jpeg") %>	 -->
+
+</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.carousel').carousel('cycle');
+		});
+
+	</script>

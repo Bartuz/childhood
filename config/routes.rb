@@ -7,7 +7,7 @@ LearningLoop::Application.routes.draw do
 
   get 'aboutus' => 'welcome#about'
   get 'signup' => 'welcome#signup'
-
+  get 'firstpeek' => "welcome#firstpeek"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
