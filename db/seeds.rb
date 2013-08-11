@@ -212,35 +212,35 @@ create_event(
     cat_physical
 )
 create_event(
-    "",
+    "Something",
     "Elise cog attn regulation with scooping water",
     nil,
     Date.new(2013, 8, 8), nil, chris_class, c_orion,
     cat_physical
 )
 create_event(
-    "",
+    "Something",
     "Atticus looked at the gravel and walks back to his shoes put them on and then walked back onto the gravel. Cog prob solv",
     nil,
     Date.new(2013, 8, 8), "groupplay.jpg", chris_class, c_orion,
     cat_mathematics
 )
 create_event(
-    "",
+    "Something",
     "Ophelia hits an elephant against ECE shoulder. Elephant makes noise. Ophelia hits other hand on ECE's other shoulder. No sounds. Ophelia repeats. Cognition cause and effect.",
     nil,
     Date.new(2013, 8, 6), nil, chris_class, c_orion,
     cat_physical
 )
 create_event(
-    "",
+    "Something",
     "Mia transferred water from one bucket to another with a cup",
     nil,
     Date.new(2013, 8, 6), "groupplay.jpg", chris_class, c_orion,
     cat_physical
 )
 create_event(
-    "",
+    "Something",
     "Bevin said, 'there's two now. We'll use the small cup to water the small one and the big one for the big one'",
     nil,
     Date.new(2013, 8, 4), nil, chris_class, c_orion,
