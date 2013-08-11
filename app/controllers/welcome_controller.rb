@@ -21,4 +21,8 @@ class WelcomeController < ApplicationController
 	    end
 	end
 
+	def firstpeek
+		
+	end
+
 end

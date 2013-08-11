@@ -1,0 +1,125 @@
+<div class="hero-blurb page-about-us" style="margin: 0 auto; width:900px;">
+	<style type="text/css">
+		.note-right{
+			float: right;
+			width: 400px;
+			height:auto;
+		}
+		.note-left{
+			float: left;
+			width: 400px;
+			height:auto;
+		}
+		#myCarousel {
+			float: right;
+			width: 400px;
+		}
+		section{
+			margin-bottom:40px;
+			box-shadow: box-shadow: 2px 2px 2px #CCC;
+		}
+		section img, section video{
+		  -webkit-transform: rotate(90deg);
+		  -ff-transform: rotate(90deg);
+		  transform: rotate(90deg);
+		  box-shadow: box-shadow: 4px 4px 3px #CCC;
+		}
+		article:first{
+			background: #f4f3ef;
+		}
+		.custom-pos{
+			position:absolute;
+			height: 300px;
+			width: auto;
+			top: 450px;
+		}
+		#second-section{
+			height:300px;
+		}
+		#third-section{
+			height:700px;
+		}
+		#forth-section{
+			height:300px;
+		}
+		.phone2{
+			position:absolute;
+		}
+		.custom-note{
+			margin-top: 90px;
+		}
+	</style>
+	<section>
+		<article class="note-left">
+			<h3>First Peek</h3>
+			<p>
+				We rolled out a beta version of Learning Loop today with a great group of early childhood educators, parents, and kids!
+			</p>
+		</article>
+		<div id="myCarousel" class="carousel slide">
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+			</ol>
+			<!-- Carousel items -->
+			<div class="carousel-inner">
+				<div class="active item"><%= image_tag asset_path("firstpeek/girlbucket.jpeg") %> </div>
+				<div class="item"><%= image_tag asset_path("firstpeek/jesskids.jpeg") %> </div>
+
+			</div>
+			<!-- Carousel nav -->
+			<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+			<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+		
+		</div>
+		 <div class="clearfix"></div>
+	</section>
+	<section id="second-section">
+		<article class="note-right">
+			<h3>It's so easy to use!</h3>
+			<p>
+				User friendly interface was designed to give oportonity everyone to use this toolUser friendly interface was designed to give oportonity everyone to use this toolUser friendly interface was designed to give oportonity everyone to use this tool
+			</p>
+		</article>
+		<%= image_tag asset_path("firstpeek/parentll.jpeg"), :class => "float_left custom-pos" %>
+		 <div class="clearfix"></div>
+	</section>
+
+	<section id="third-section">
+		<article class="note-left">
+			<h3>Track your children progress!</h3>
+			<p>
+				LearningLoop allows you to record all your observations in one place. With easy to use interface
+				you will love it.
+			</p>
+		</article>
+				<div class="note-right"><%= image_tag asset_path("firstpeek/erin.jpeg") %> </div>
+		<div class="clearfix"></div>
+		<div class="note-left"><%= image_tag asset_path("firstpeek/llmobile.jpeg") %> </div>
+		<article class="custom-note note-right">
+			<h3>You can even record a videos!</h3>
+			<p>
+				LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM 
+			</p>
+		</article>
+		<div class="clearfix"></div>
+	</section>
+
+	<section id="forth-section">
+		<video src="<%= asset_path 'firstpeek/Video.MOV' %>" class="note-right"></video>
+		<article class="note-left">
+		<h3>Register now!</h3>
+			<p>
+				Start using this amazing tool right now YAYYAYAYAYYAYAYAYAYAY
+			</p>
+		<div class="clearfix"></div>
+	</article>
+	</section>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.carousel').carousel('cycle');
+		});
+
+	</script>
+</div>
