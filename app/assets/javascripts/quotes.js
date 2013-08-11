@@ -1,8 +1,12 @@
 
 Array.prototype.randomElement = function (rand) {
-  console.log("prototype")
-  console.log(rand)
-  return this[Math.floor(rand * this.length)];
+  // console.log("prototype");
+  // console.log(rand);
+  // console.log("losujemy COS!!!!!!")
+  var cos = this[Math.floor(rand * this.length)];
+  // console.log(cos);
+  return cos;
+  // return this[Math.floor(rand * this.length)];
 };
 var authors = ["melinium","kellysy","bronzedane","mumm","tlorke","jol4nta","alicepractise","biGBro","adamson32","marpec","eddies","zywiecdobry","kurkaa","torontaah"];
 var messages = [
@@ -16,29 +20,29 @@ var messages = [
 var authorspool = []
 var messagespool = []
 var randomizer = function(array){
-	console.log("Now I randomize with " + array);
+	// console.log("Now I randomize with " + array);
 	poolReseter();
 	if (array == "a"){
 		var rand = Math.random();
 		while (authorspool.indexOf(rand) != -1){
 			rand = Math.random()		
-			console.log("reroll rand and " + rand )
+			// console.log("reroll rand and " + rand )
 		}
-		console.log(rand);
+		// console.log(rand);
 		authorspool.push(rand);
-		return authorspool.randomElement(rand)
+		return authors.randomElement(rand)
 	} else {
 		var rand = Math.random();
-		while (messagespool.indexOf(rand) != -1){
+		while (messagespool.indexOf(rand) > -1){
 			rand = Math.random()
-			console.log("reroll rand and " + rand )		
+			// console.log("reroll rand and " + rand )		
 		}
 		messagespool.push(rand)
-		return messagespool.randomElement(rand)
+		return messages.randomElement(rand)
 	}
 }
 var poolReseter = function(){
-	console.log("poolReseter");
+	// console.log("poolReseter");
 	if (authorspool.length == authors.length){
 		authorspool = [];
 	}
@@ -49,19 +53,19 @@ var poolReseter = function(){
 }
 
 $(document).ready(function(){
-	console.log("doc redy");
+	// console.log("doc redy");
 	var randomQuote = function(){
-		console.log("I just entered randomQuote...");
+		// console.log("I just entered randomQuote...");
 		var quote = randomizer("m");
-		console.log(quote);
+		// console.log(quote);
 		var author = randomizer("a");
-		console.log(author);
-		$("#txt").fadeOut('slow');
-		$("#author").fadeOut('slow');
+		// console.log(author);
+		$("#txt").hide();
+		$("#author").hide();
 		$("#txt").text(quote);
 		$("#author").text(author);
-		$("#txt").fadeIn('fast');
-		$("#author").fadeIn('fast');
+		$("#txt").fadeIn('slow').css("display","inline-block");
+		$("#author").fadeIn('slow').css("display","inline-block");
 		}	
-	var quotesLoop = setInterval(function(){randomQuote()},10000)
+	var quotesLoop = setInterval(function(){randomQuote()},5000)
 })
