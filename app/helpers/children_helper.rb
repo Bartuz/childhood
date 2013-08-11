@@ -1,14 +1,27 @@
 module ChildrenHelper
 
+    def format_address(child)
+        child.address
+    end
+
+    def format_health_notes(child)
+        if child.health_notes.empty?
+            "<em>No health concerns</em>".html_safe
+        else
+            child.health_notes
+        end
+    end
+
     def child_timeline_json(child)
         events = []
         child.events.each do |event|
+            event_picture_url = asset_path("events/" + event.picture_url) unless event.picture_url.blank?
             events << {
                 :startDate=>event.occurred_on.strftime("%Y,%m,%d"),
                 :headline=>event.title,
                 :text=>event.notes,
                 :asset=> {
-                    :media => "http://localhost:3000/assets/avatars/01.jpg",
+                    :media => event_picture_url,
                     :credit => "",
                     :caption => ""
                 }
@@ -17,12 +30,12 @@ module ChildrenHelper
 
         timeline = {
             :timeline => {
-                :headline => "#{child.first_name.pluralize} Learning Loop",
+                :headline => "#{child.first_name}'s Learning Loop",
                 :type => "default",
-                :text => "This is a subtitle",
+                :text => "",
                 :startDate=>"2012",
                 :asset => {
-                    :thumbnail => "http://localhost:3000/assets/avatars/01.jpg",
+                    :thumbnail => asset_path("avatars/" + child.picture_url),
                 },
                 :date => events,
             }

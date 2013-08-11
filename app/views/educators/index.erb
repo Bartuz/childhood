@@ -7,7 +7,7 @@
   <% @children.each do |child| %>
       <div class="col-lg-4">
         <h2><%= child.first_name %></h2>
-        <%= image_tag asset_path "avatars/" + child.picutre_url %>
+        <%= image_tag asset_path "avatars/" + child.picture_url %>
 
         <p><%= link_to "Details", activity_child_path(child.id) %></p>
       </div>
