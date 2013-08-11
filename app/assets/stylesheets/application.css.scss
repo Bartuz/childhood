@@ -34,6 +34,7 @@ nav a:link, nav a:visited{color:#222; font-weight:bolder; font-size:12px; margin
 .logo{background:url('homepage/logo.png'); margin-top: 30px;display: inline-block; width:410px; height:130px; background-repeat:no-repeat; padding: 30px 0 0 80px; font-size:39px; color:#fff; text-shadow:1px 1px 2px #ccc; letter-spacing:-1px;}
 
 div#header {
+	position:relative;
   .header-bg{min-width:900px; z-index:-1000; width:100%; background:$lime; display:block; height:110px; top:0}
   header{width:900px; margin: 0 auto; position:absolute; top:20px; left:$left_margin; }
   .logo{background: url('homepage/logo.png'); width:410px; height:130px; background-repeat:no-repeat; padding: 30px 0 0 80px; font-size:39px; color:#fff; text-shadow:1px 1px 2px #ccc; letter-spacing:-1px;}
@@ -43,6 +44,7 @@ div#header {
 
   nav{position:absolute; right:0; top:30px}
   nav a:link, nav a:visited{color:#222; font-weight:bolder; font-size:12px; margin-right:10px; text-decoration:none;}
+
 }
 .pre-footer-cont{width:100%; background:#d4ec89; height:140px;}
 #pre-footer{width:900px; margin: 0 auto}
@@ -278,3 +280,21 @@ div.event-list {
 #activity textarea {
 	width:90%;
 }
+
+
+
+
+#video {
+	width:883px;
+	
+	left:40%;
+	
+	.modal-body {
+		max-height:490px;
+	}
+}
+
+
+	.launch-video {
+		font-weight:200;
+	}
