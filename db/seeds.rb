@@ -18,13 +18,16 @@ def create_educator(first, last, email)
   Educator.create( :user=>create_user(first, last, email) )
 end
 
-def create_child(first, last, parent, birthdate, url )
+def create_child(first, last, parent, birthdate, educational_setting, profile_pic_url, health_notes, address )
 	Child.create(
 		:first_name=>first, 
 		:last_name=>last,
 		:parent=>parent,
 		:birthdate=>birthdate,
-    :picutre_url=>url
+		:educational_setting=> educational_setting,
+    	:picture_url=>profile_pic_url,
+    	:health_notes=>health_notes,
+    	:address => address
 	)
 end
 
@@ -43,9 +46,17 @@ def create_category(name, description, parent=nil)
 	end
 end
 
-def create_event(title, notes, occurred_on, classroom, child, categories)
-	event = Event.create(:title=>title, :notes=>notes, :occurred_on=>occurred_on, :classroom=>classroom, :child=>child)
-	event.categories = categories
+def create_event(indicator, observations, interpretation, occurred_on, picture_url, classroom, child, category)
+	event = Event.create(
+		:indicator=>indicator, 
+		:observations=>observations, 
+		:interpretation=>interpretation,
+		:occurred_on=>occurred_on, 
+		:classroom=>classroom, 
+		:child=>child,
+		:picture_url => picture_url,
+		:category=>category
+	)
 	event
 end
 
@@ -57,8 +68,8 @@ e_chris = create_educator("Chris", "Buccella", "chrisbuccella@gmail.com")
 e_mtomas = create_educator("Ms. J", "Tomas", "ms.jtomas@gmail.com")
 e_erin = create_educator("Erin", "Williams", "to.erin.williams@gmail.com")
 
-c_isla = create_child("Isla", "Rousseaux-Bridle", p_max, Date.new(2009, 6, 9), "01.jpg")
-c_orion = create_child("Orion", "Rousseaux-Bridle", p_max, Date.new(2011, 3, 29), "02.jpg")
+c_isla = create_child("Isla", "Rousseaux-Bridle", p_max, Date.new(2009, 6, 9), "School", "isla.jpg", "", "612 Alexander Rd., Toronto, Ontario, M5G 15C")
+c_orion = create_child("Orion", "Rousseaux-Bridle", p_max, Date.new(2011, 3, 29), "Child care", "02.jpg", "", "612 Alexander Rd., Toronto, Ontario, M5G 15C")
 
 chris_class = create_classroom("Chris' Classroom", "", [e_chris], [ c_isla, c_orion ])
 
@@ -69,12 +80,12 @@ cat_sorting = create_category("sorting", cat_numeracy)
 cat_data_management = create_category("data management", cat_numeracy)
 cat_measurement = create_category("measurment", cat_numeracy)
 
-create_event("Numerations", "A description", Date.new(2012, 01, 16), chris_class, c_isla, 
-	[cat_numeration, cat_pattern]
+create_event("Numerations", "My observations", "An indicator", Date.new(2012, 01, 16), "blocks.jpg", chris_class, c_isla, 
+	cat_numeration
 )
-create_event("Sorting Stuff", "A description", Date.new(2012, 01, 21), chris_class, c_isla, 
-	[cat_sorting]
+create_event("Sorting Stuff", "My observations", "An indicator", Date.new(2012, 01, 21), nil, chris_class, c_isla, 
+	cat_sorting
 )
-create_event("Data Play", "A description", Date.new(2012, 01, 24), chris_class, c_isla, 
-	[cat_data_management]
+create_event("Data Play", "My observations", "An indicator", Date.new(2012, 01, 24), nil,chris_class, c_isla, 
+	cat_data_management
 )

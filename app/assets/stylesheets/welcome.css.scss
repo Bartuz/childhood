@@ -3,6 +3,7 @@ body, html, h1,h2,h3,h4,h5,h6{padding:0; margin:0; line-height:100%; font-family
 
 body{background:url('homepage/bg.jpg')}
 
+<<<<<<< HEAD
 .header-bg{min-width:900px; position:absolute; z-index:-1000; width:100%; display:block; height:110px; top:0}
 
 header{width:100%; margin: 0 auto; background:#d4ec89; height:120px }
@@ -14,6 +15,9 @@ nav a:link, nav a:visited{color:#222; font-weight:bolder; font-size:12px; margin
 
 .tagline{background:#f4f3ef; border-top:1px solid #c4c2b8; border-bottom:1px solid #c4c2b8; width:100%;}
 .tagline-cont{padding-top:3px;font-size: 12px; letter-spacing:1px; height:23px; width:900px; margin: 6px auto 0 auto; padding-left:170px}
+=======
+.hero-bg{height:360px; top:120px; width:100%; position:absolute; z-index:-1; background:#fff;}
+>>>>>>> 580a16d8a99a301ffead326fd025da8443980ac6
 
 .hero-unit-cont{width:900px; height:300px; margin: 0 auto;}
 
