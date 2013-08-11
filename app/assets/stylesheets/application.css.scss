@@ -214,6 +214,15 @@ div.event-list {
 
 .page-about-us {
 
+	p {
+		line-height:20px;
+	}
+	.img-circle{
+		border-radius:0; 
+		border:5px solid #fff; 
+		box-shadow:1px 1px 6px #666 !important
+	}
+
 	h3 {
 		margin:31px 0px;
 	}
