@@ -7,47 +7,54 @@
   <%= csrf_meta_tags %>
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
+
 <body>
-  <div id="header">
-    <div class="header-bg"></div>
-    <div class="tagline-bg"></div>
-    <div class="hero-bg"></div>
-    <header>
-      <%= link_to root_path  do%>
-        <div class="logo"></div>
-      <% end %>
-        <nav>
-          <a href="#">Privacy</a>
-          <a href="#">Pricing</a>
-          <a href="#">Support</a>
-        </nav>
-        <div class="tagline">
-            Linking families with educators
+   <header>
+        <div class="header-cont">
+            <div class="header-cont-float">
+              <%= link_to root_path  do%>
+                <div class="logo"></div>
+              <% end %>
+            <nav>
+                <a href="#">Privacy</a>
+                <a href="#">Pricing</a>
+                <a href="#">Support</a>
+            </nav>
+        </div>
         </div>
     </header>
-  </div>
-            
-      <div class="content-container">
-		    <%= yield %>
-      </div>
-
-        <div id="pre-footer">
-          <div class="footer-links">
-            <a href="#">About Us</a>
-            <a href="#">Our Team</a>
-            <a href="#">FAQ</a>
-            <a href="#">How-To</a>
-            <a href="#">Support</a>
-          </div>
-          
-          <div class="footer-logo">
-            <%= image_tag asset_path("homepage/baby-bird.png") %>
-          </div>
+    <div class="tagline">
+        <div class="tagline-cont">
+        Linking families with educators
         </div>
+    </div>
+                 
+     
+		    <%= yield %>
+        
+        <div class="pre-footer-cont">
+        <div id="pre-footer">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Our Team</a>
+                <a href="#">FAQ</a>
+                <a href="#">How-To</a>
+                <a href="#">Support</a>
+            </div>
+        </div>
+        </div>
+        
+        <div class="footer-cont">
         <footer>
-          <div class="footer-copy">
-          2013 &copy; Startup Weekend TO : EDU
-          </div>
+        <div class="footer-logo">
+                <%= image_tag asset_path("homepage/baby-bird.png") %>
+        </div>
+        
+            <div class="footer-copy">
+            2013 &copy; Startup Weekend TO : EDU
+            </div>
         </footer>
-</body>
+        </div>
+        
+    </body>
 </html>

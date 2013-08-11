@@ -1,32 +1,35 @@
-<h2>Class List</h2>
+ <div class="hero-blurb" style="margin: 0 auto; width:900px;">
+    <h2>Class List</h2>
 
-  <%= link_to "Add New Child", new_child_path %>
-  <%= link_to "Edit Class List", new_child_path %>
+      <%= link_to "Add New Child", new_child_path %>
+      <%= link_to "Edit Class List", new_child_path %>
 
-<div class="people">
+    <div class="people">
+    <ul>
+      <% @children.each do |child| %>
+
+
+       <li>
+            <article>
+              <section class="person">
+                <a href="<%=  activity_child_path(child.id) %>">
+                  <header>
+                    <h4><%= child.first_name %></h4>
+                  </header>
+                  <%= image_tag(asset_path("avatars/" + child.picutre_url)) %>
+                </a>
+              </section>
+              <section class="tools">
+                <a href="<%=  activity_child_path(child.id) %>"><i class="icon-zoom-in"></i></a>
+                <a href="#"><i class="icon-plus-sign"></i></a>
+                <a href="#"><i class="icon-remove-sign"></i></a>
+              </section>
+            </article>
+          </li>
+
+
+      <% end %>
 <ul>
-  <% @children.each do |child| %>
-
-
-   <li>
-        <article>
-          <section class="person">
-            <a href="<%=  activity_child_path(child.id) %>">
-              <header>
-                <h4><%= child.first_name %></h4>
-              </header>
-              <%= image_tag(asset_path("avatars/" + child.picutre_url)) %>
-            </a>
-          </section>
-          <section class="tools">
-            <a href="<%=  activity_child_path(child.id) %>"><i class="icon-zoom-in"></i></a>
-            <a href="#"><i class="icon-plus-sign"></i></a>
-            <a href="#"><i class="icon-remove-sign"></i></a>
-          </section>
-        </article>
-      </li>
-
-
-  <% end %>
-
-</div>
+    <div class="clearfix"></div>
+    </div>
+ </div>
