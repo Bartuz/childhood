@@ -69,6 +69,6 @@ $(document).ready(function(){
 		$("#author").fadeIn('slow').css("display","inline-block");
 				$("#txt").fadeIn('slow').css("display","inline-block");
 		}	
-	randomQuote();
-	var quotesLoop = setInterval(function(){randomQuote()},5000)
+	// randomQuote();
+	// var quotesLoop = setInterval(function(){randomQuote()},5000)
 })
