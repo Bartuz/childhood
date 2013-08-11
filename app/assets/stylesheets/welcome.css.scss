@@ -21,7 +21,7 @@ nav a:link, nav a:visited{color:#222; font-weight:bolder; font-size:12px; margin
 
 .select-role-cont{width: 900px; margin: 0 auto; padding: 30px 0 30px 0px}
 .select-role{width: 100%;}
-.select-role h3{display:block; width:500px; float:left;}
+.select-role h3{display:block; width:500px; float:left; margin-top:-6px;}
 .select-role a:link,
 .select-role a:visited{color:#fff; padding: 5px 35px; background:#78bec0; border-radius:15px; text-decoration:none;}
 .select-role a:hover{background:#459294}
@@ -95,3 +95,9 @@ margin-left: -46px;
 .value .two{padding: 20px 10px; width:280px; display:inline-block; float:left}
 .value .three{padding: 20px 10px; width: 280px; display:inline-block;float:left}
 .one,.two,.three{text-align:center; font-size:14px; line-height:20px;}
+
+
+.launch-video {
+	position:absolute;
+	right:200px;;
+}
