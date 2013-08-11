@@ -238,3 +238,16 @@ div.event-list {
 		}
 	}
 }
+
+.tagline-cont {
+	position:relative;
+	.social {
+		position:absolute;
+		right:0px;
+		bottom:2px;
+		
+		div.soc-button {
+			float:left;
+		}
+	}
+}
