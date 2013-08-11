@@ -1,10 +1,37 @@
- <div class="hero-blurb" style="margin: 0 auto; width:900px;">
+<div class="hero-blurb" style="margin: 0 auto; width:900px;">
 
-  
-<%= link_to families_path do %>
-<h2>My Family > <%= @child.first_name %></h2>
-<% end %>
+
+  <%= link_to families_path do %>
+      <h2>My Family > <%= @child.first_name %></h2>
+  <% end %>
 
   <%= render "profile" %>
-  <%= render "activity_timeline" %>
+
+  <ul class="nav nav-tabs" id="myTab">
+    <li class="active" data-toggle="tab">
+      <a href="#timeline">Timeline</a>
+    </li>
+    <li data-toggle="tab">
+      <a href="#activity">List View</a>
+    </li>
+  </ul>
+
+  <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade active in" id="timeline">
+      <%= render "activity_timeline" %>
+    </div>
+    <div class="tab-pane fade" id="activity">
+      <%= render "activity_list" %>
+    </div>
+  </div>
+
 </div>
+
+<script>
+    $(document).ready(function() {
+        $('#myTab a').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        })
+    });
+</script>

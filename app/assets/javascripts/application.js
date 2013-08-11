@@ -11,8 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require jquery.ui.all
 //= require bootstrap
 //= require storyjs-embed
 //= require_tree .

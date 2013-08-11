@@ -6,7 +6,7 @@
   <%= link_to "add my child", new_child_path, :class=>"button add-child" %>
 </h3> 
   <ul>
-  <% @children.each do |child| %>
+  <% @children.each_with_index do |child, index| %>
       <%= link_to child_path( child ) do %>
       <li class="child-li">
         <article>
@@ -23,6 +23,10 @@
                 <dd><%= format_health_notes(child) %></dd>
                 <dt>Home Address</dt>
                 <dd><%= format_address(child) %></dd>
+                <% if index == 0 %>
+                <dt><strong>NEW Activities!</strong></dt>
+                <dd><span class="badge">2</span></dd>
+                <% end %>
               </dl>
             </aside>
           <section class="person">
