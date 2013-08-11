@@ -16,4 +16,3 @@
 //= require bootstrap
 //= require storyjs-embed
 //= require_tree .
-
