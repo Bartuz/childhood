@@ -3,10 +3,10 @@ Array.prototype.randomElement = function (rand) {
   // console.log("prototype");
   // console.log(rand);
   // console.log("losujemy COS!!!!!!")
-  var cos = this[Math.floor(rand * this.length)];
+  // var cos = this[Math.floor(rand * this.length)];
   // console.log(cos);
-  return cos;
-  // return this[Math.floor(rand * this.length)];
+  // return cos;
+  return this[rand];
 };
 var authors = ["melinium","kellysy","bronzedane","mumm","tlorke","jol4nta","alicepractise","biGBro","adamson32","marpec","eddies","zywiecdobry","kurkaa","torontaah"];
 var messages = [
@@ -23,18 +23,18 @@ var randomizer = function(array){
 	// console.log("Now I randomize with " + array);
 	poolReseter();
 	if (array == "a"){
-		var rand = Math.random();
+		var rand = Math.floor(Math.random()*authors.length);
 		while (authorspool.indexOf(rand) != -1){
-			rand = Math.random()		
+			rand = Math.floor(Math.random()*authors.length);	
 			// console.log("reroll rand and " + rand )
 		}
 		// console.log(rand);
 		authorspool.push(rand);
 		return authors.randomElement(rand)
 	} else {
-		var rand = Math.random();
+		var rand = Math.floor(Math.random()*messages.length);
 		while (messagespool.indexOf(rand) > -1){
-			rand = Math.random()
+			rand = Math.floor(Math.random()*messages.length);
 			// console.log("reroll rand and " + rand )		
 		}
 		messagespool.push(rand)
