@@ -76,6 +76,13 @@ chris_class = create_classroom("Chris' Classroom", "", [e_chris], [ c_isla, c_or
 cat_mathematics = create_category("Mathematics", "Study of numbers")
 cat_language = create_category("Language", "Study of speaking")
 
+cat_cognition = create_category("Cognition", "...")
+cat_cognition_sub1 = create_category("Temporal", "...", cat_cognition)
+cat_emotional = create_category("Emotional", "...")
+cat_emotional_sub1 = create_category("Expression of Feelings", "...", cat_emotional)
+cat_physical = create_category("Physical", "...")
+cat_physical_sub1 = create_category("Fine Motor", "...", cat_physical)
+
 create_event(
 	"Recognized some quantities without having to count", 
 	"Isla sat at the table in the kitchen centre. Another child asked, 'Can I have an apple?' Sam looked at the apples on his plate and said, 'Sure, I have 6 anyways'", 
@@ -89,4 +96,19 @@ create_event(
 	nil,
 	Date.new(2012, 01, 21), nil, chris_class, c_isla, 
 	cat_language
+)
+
+create_event(
+    "Using terms related t time ""Tomorrow"" and ""Yesterday""",
+    "...",
+    "...",
+    Date.new(2012, 01, 16), nil, chris_class, c_orion,
+    cat_cognition_sub1
+)
+create_event(
+    "Beginning to show self-conscious emotions (Shame, Embarrassment, Guilt, Pride)",
+    "...",
+    "...",
+    Date.new(2013, 01, 21), nil, chris_class, c_orion,
+    cat_emotional_sub1
 )

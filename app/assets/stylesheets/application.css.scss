@@ -55,6 +55,7 @@ footer .footer-copy{margin-bottom: 10px;text-align:right; margin-top:-14px;}
 h2 { 
 	color: $teal; 
 	margin-bottom: 31px;
+	line-height:24px;
 }
 
 h3 {
@@ -65,7 +66,6 @@ h3 {
 .content-container {
 	padding:$left_margin;
 	line-height:1.2em;
-	background: transparent url('homepage/bg.jpg') repeat 0px 0px;
 	margin: 0 auto; width:900px; padding-top:5px;
 }
 .child-pic {
@@ -160,7 +160,46 @@ section.tools {
 @import "children";
 
 
+<<<<<<< HEAD
 .special-plus {
 	font-size:70px;
 	line-height: 120px;
 }
+.vco-slider .content-container .media {
+	width:auto !important;
+}
+
+.vco-slider .content-container .text {
+	width:100% !important;
+}
+
+
+
+div.event-list {
+	padding:12px;
+	th,td {
+		padding:12px;
+	}
+
+	th.date { width:25%; }
+	th.category { width:15%; }
+	th.indicator { width:60%; }
+
+	th {
+		border-bottom: solid 2px #EFEFEF;
+	}
+
+	td.date,
+	td.category,
+	td.indicator {
+		border-bottom: solid 1px #EFEFEF;
+		cursor:pointer;
+	}
+
+	tr:hover > td {
+		background:#EFEFEF;
+	}
+
+	tr.event-details:hover > td {
+		background:none;
+	}

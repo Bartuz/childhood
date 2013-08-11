@@ -1,0 +1,16 @@
+  <section class="row profile content-area">
+    <%= image_tag asset_path "avatars/" + @child.picture_url %>
+    <dl>
+      <dt>Name</dt>
+      <dd><%= @child.first_name %> <%= @child.last_name %></dd>
+      <dt>Educational Setting</dt>
+      <dd><%= @child.educational_setting %></dd>
+      <dt>Date of Birth</dt>
+      <dd><%= @child.birthdate.strftime("%B %d, %Y") %></dd>
+      <dt>Known Health Concerns</dt>
+      <dd><%= format_health_notes(@child) %></dd>
+      <dt>Home Address</dt>
+      <dd><%= format_address(@child) %></dd>
+    </dl>
+  <div class="clearfix"></div>
+  </section>
