@@ -68,8 +68,8 @@ e_chris = create_educator("Chris", "Buccella", "chrisbuccella@gmail.com")
 e_mtomas = create_educator("Ms. J", "Tomas", "ms.jtomas@gmail.com")
 e_erin = create_educator("Erin", "Williams", "to.erin.williams@gmail.com")
 
-c_isla = create_child("Isla", "Rousseaux-Bridle", p_max, Date.new(2009, 6, 9), "School", "isla.jpg", "", "612 Alexander Rd., Toronto, Ontario, M5G 15C")
-c_orion = create_child("Orion", "Rousseaux-Bridle", p_max, Date.new(2011, 3, 29), "Child care", "02.jpg", "", "612 Alexander Rd., Toronto, Ontario, M5G 15C")
+c_isla = create_child("Ava", "", p_max, Date.new(2009, 6, 9), "School", "isla.jpg", "", "612 Alexander Rd., Toronto, Ontario, M5G 15C")
+c_orion = create_child("Galen", "Gibbins", p_max, Date.new(2011, 3, 29), "Child care", "02.jpg", "", "612 Alexander Rd., Toronto, Ontario, M5G 15C")
 
 chris_class = create_classroom("Chris' Classroom", "", [e_chris], [ c_isla, c_orion ])
 
@@ -122,43 +122,43 @@ create_event(
     "Recognized some quantities without having to count",
     "Isla sat at the table in the kitchen centre. Another child asked, 'Can I have an apple?' Sam looked at the apples on his plate and said, 'Sure, I have 6 anyways'",
     "Isla fulfilled this expectation to count objects without pointing at them one by one",
-    Date.new(2013, 8, 7), "blocks.jpg", chris_class, c_isla,
+    Date.new(2013, 8, 5), "blocks.jpg", chris_class, c_isla,
     cat_mathematics
 )
 create_event(
     "Listen and respond to others for a variety of purposes",
     nil,
     nil,
-    Date.new(2013, 8, 5), nil, chris_class, c_isla,
+    Date.new(2013, 8, 7), nil, chris_class, c_isla,
     cat_science
 )
 create_event(
-    "Recognized some quantities without having to count",
-    "Isla sat at the table in the kitchen centre. Another child asked, 'Can I have an apple?' Sam looked at the apples on his plate and said, 'Sure, I have 6 anyways'",
-    "Isla fulfilled this expectation to count objects without pointing at them one by one",
-    Date.new(2013, 8, 5), "blocks.jpg", chris_class, c_isla,
-    cat_language
+    "Spatial awareness, sharing and playing with others.",
+    "Very vocal and intuitive. Remembers names, details and places with great detail. Elise loves to share details and has a vivid imagination.",
+    nil,
+    Date.new(2013, 8, 7), "groupplay.jpg", chris_class, c_isla,
+    cat_emotional
 )
 create_event(
-    "Listen and respond to others for a variety of purposes",
-    nil,
-    nil,
-    Date.new(2013, 8, 8), nil, chris_class, c_isla,
-    cat_language
-)
-create_event(
-    "Recognized some quantities without having to count",
-    "Isla sat at the table in the kitchen centre. Another child asked, 'Can I have an apple?' Sam looked at the apples on his plate and said, 'Sure, I have 6 anyways'",
-    "Isla fulfilled this expectation to count objects without pointing at them one by one",
-    Date.new(2013, 8, 9), "blocks.jpg", chris_class, c_isla,
-    cat_mathematics
-)
-create_event(
-    "Listen and respond to others for a variety of purposes",
-    nil,
+    "Sharing with other children. Making and keeping friends. Picking vegetables using motor skills.",
+    "Very verbal and descriptive with language. Talked about how he came to school today, Hudson loves to talk and shares very well.",
     nil,
     Date.new(2013, 8, 9), nil, chris_class, c_isla,
-    cat_language
+    cat_emotional
+)
+create_event(
+    "Playing and sharing with others.",
+    "Student likes to be self directed and play on their own. Likes to discover and try a variety of activities.",
+    nil,
+    Date.new(2013, 8, 11), "groupplay.jpg", chris_class, c_isla,
+    cat_emotional
+)
+create_event(
+    "Using fine and gross motor skills to plant seeds in a cup.",
+    "Student was able to dig, sort and plant seeds. They enjoyed burying the seeds and watering them after.",
+    "Gross motor skills are developing well. Snatched a cup from another student but was quick to return it.",
+    Date.new(2013, 8, 11), "sandbucket.jpg", chris_class, c_isla,
+    cat_physical
 )
 
 #c_orion events
