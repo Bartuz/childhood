@@ -42,36 +42,39 @@
 
       <ul class="nav nav-tabs">
       <li class="active">
-        <a href="#activity">Log Observation</a>
+        <a href="#activity">Log Activity</a>
       </li>
     </ul>
         <div id="myTabContent" class="tab-content">
       <div class="tab-pane fade active in" id="activity">
-        <form class="form-horizontal">
+        <%= form_tag(:controller => "children", :action => "log_activity", :method => "post", :class => "form-horizontal") do %>
           <fieldset>
             <div class="form-group">
               <label for="domain">Domain</label>
-              <input type="text" class="form-control" id="domain" placeholder="Select a Domain">
+              <%= select_tag "domain", options_from_collection_for_select(@parent_categories, "id", "name"), :class => "form-control"  %>
             </div>
             <div class="form-group">
               <label for="skill">Skill</label>
-              <input type="text" class="form-control" id="skill" placeholder="Select a Skill">
+              <%= select_tag "skill", options_from_collection_for_select(@sub_categories, "id", "name"), :class => "form-control"  %>
             </div>
             <div class="form-group">
               <label for="indicator">Indicator</label>
-              <input type="text" class="form-control" id="indicator" placeholder="Enter an Indicator">
+              <%= text_area_tag(:indicator, "", :class => "form-control") %>
             </div>
             <div class="form-group">
               <label for="observation">Observation</label>
-              <input type="text" class="form-control" id="observation" placeholder="Enter an Observation">
+              <%= text_area_tag(:observation, "", :class => "form-control") %>
             </div>
             <div class="form-group">
               <label for="interpretation">Interpretation</label>
-              <input type="text" class="form-control" id="interpretation">
+              <%= text_area_tag(:interpretation, "", :class => "form-control") %>
             </div>
-            <button type="submit" class="btn btn-default">Publish Observation</button>
+            <%= hidden_field_tag(:child_id, @child.id) %>
+            <%= hidden_field_tag(:parent_id, "5") %>
+            <button type="submit" class="btn btn-default">Save Draft</button>
+            <button type="submit" class="btn btn-default">Publish Activity</button>
           </fieldset>
-        </form>
+        <% end %>
       </div>
     </div>
 

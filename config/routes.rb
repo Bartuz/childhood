@@ -31,6 +31,7 @@ LearningLoop::Application.routes.draw do
      resources :children do
        member do
          get 'activity'
+         post 'log_activity'
        end
      end
 
