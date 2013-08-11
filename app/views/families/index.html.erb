@@ -25,12 +25,12 @@
                 <dd><%= format_address(child) %></dd>
               </dl>
             </aside>
-          <section class="person">
-              <header>
-                <h4><%= child.first_name %></h4>
-              </header>
-              <%= image_tag(asset_path("avatars/" + child.picture_url), :class => "child-pic") %>
-          </section>
+            <section class="person">
+                <header>
+                  <h4><%= child.first_name %></h4>
+                </header>
+                <%= image_tag(asset_path("avatars/" + child.picture_url), :class => "child-pic") %>
+            </section>
             <div class="clearfix"></div>
         </article>
             <% end %>

@@ -1,16 +1,57 @@
-  <section class="row profile content-area">
-    <%= image_tag asset_path "avatars/" + @child.picture_url %>
-    <dl>
-      <dt>Name</dt>
-      <dd><%= @child.first_name %> <%= @child.last_name %></dd>
-      <dt>Educational Setting</dt>
-      <dd><%= @child.educational_setting %></dd>
-      <dt>Date of Birth</dt>
-      <dd><%= @child.birthdate.strftime("%B %d, %Y") %></dd>
-      <dt>Known Health Concerns</dt>
-      <dd><%= format_health_notes(@child) %></dd>
-      <dt>Home Address</dt>
-      <dd><%= format_address(@child) %></dd>
-    </dl>
+<section class="row profile content-area">
+  <aside class="current-educator">
+      <%= image_tag(asset_path("avatars/teacher.jpg"), :class => "educator-pic") %>
+      <a href="#" id="send-message" class="button">Send Erin a message</a>
+  </aside>
+  <%= image_tag asset_path "avatars/" + @child.picture_url %>
+  <dl>
+    <dt>Name</dt>
+    <dd><%= @child.first_name %> <%= @child.last_name %></dd>
+    <dt>Educational Setting</dt>
+    <dd><%= @child.educational_setting %></dd>
+    <dt>Date of Birth</dt>
+    <dd><%= @child.birthdate.strftime("%B %d, %Y") %></dd>
+    <dt>Known Health Concerns</dt>
+    <dd><%= format_health_notes(@child) %></dd>
+    <dt>Home Address</dt>
+    <dd><%= format_address(@child) %></dd>
+  </dl>
+
   <div class="clearfix"></div>
-  </section>
+</section>
+
+<div id="message-form" title="Send Erin a message">
+<form>
+  <fieldset>
+    <label for="message">Message</label>
+    <input type="textarea" name="message" id="message" class="text ui-widget-content ui-corner-all" />
+  </fieldset>
+  </form>
+</div>
+
+<script>
+
+  $(document).ready(function() {
+    $( "#message-form" ).dialog({
+      autoOpen: false,
+      height: 300,
+      width: 350,
+      modal: true,
+      buttons: {
+        "Send": function() {
+            $( this ).dialog( "close" );
+        },
+        Cancel: function() {
+          $( this ).dialog( "close" );
+        }
+      },
+      close: function() {
+        allFields.val( "" ).removeClass( "ui-state-error" );
+      }
+    });
+  });
+ 
+    $( "#send-message" ).button().click(function() {
+        $( "#message-form" ).dialog( "open" );
+      });
+</script>

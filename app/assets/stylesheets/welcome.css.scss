@@ -47,6 +47,17 @@ nav a:link, nav a:visited{color:#222; font-weight:bolder; font-size:12px; margin
 	color:white;
 	text-shadow:1px 1px 2px #ccc;
 }
+#quot{
+	color:#ccc;
+content:open-quote;
+font-size:3.7em;
+line-height:.1em;
+margin-right:.25em;
+vertical-align:-.4em;
+color: #87D2F0;
+position: absolute;
+margin-left: -46px;
+}
 #quotes:before {
 color:#ccc;
 content:open-quote;
@@ -57,7 +68,6 @@ vertical-align:-.4em;
 color: #87D2F0;
 position: absolute;
 margin-left: -46px;
-
 }
 
 #author{
@@ -72,7 +82,7 @@ margin-left: -46px;
 	font-size: 16px;
 }
 #author:before{
-	content:"@";
+	content: "@";
 }
 
 .nav-header3{

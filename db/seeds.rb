@@ -103,32 +103,76 @@ cat_emotional_sub1 = create_category("Expression of Feelings", "...", cat_emotio
 cat_physical = create_category("Physical", "...")
 cat_physical_sub1 = create_category("Fine Motor", "...", cat_physical)
 
+#c_isla events
 create_event(
 	"Recognized some quantities without having to count", 
 	"Isla sat at the table in the kitchen centre. Another child asked, 'Can I have an apple?' Sam looked at the apples on his plate and said, 'Sure, I have 6 anyways'", 
 	"Isla fulfilled this expectation to count objects without pointing at them one by one",
-	Date.new(2012, 01, 16), "blocks.jpg", chris_class, c_isla, 
+	Date.new(2013, 8, 1), "blocks.jpg", chris_class, c_isla,
 	cat_mathematics
 )
 create_event(
 	"Listen and respond to others for a variety of purposes", 
 	nil, 
 	nil,
-	Date.new(2012, 01, 21), nil, chris_class, c_isla, 
+	Date.new(2013, 8, 3), nil, chris_class, c_isla,
 	cat_language
 )
+create_event(
+    "Recognized some quantities without having to count",
+    "Isla sat at the table in the kitchen centre. Another child asked, 'Can I have an apple?' Sam looked at the apples on his plate and said, 'Sure, I have 6 anyways'",
+    "Isla fulfilled this expectation to count objects without pointing at them one by one",
+    Date.new(2013, 8, 7), "blocks.jpg", chris_class, c_isla,
+    cat_mathematics
+)
+create_event(
+    "Listen and respond to others for a variety of purposes",
+    nil,
+    nil,
+    Date.new(2013, 8, 5), nil, chris_class, c_isla,
+    cat_science
+)
+create_event(
+    "Recognized some quantities without having to count",
+    "Isla sat at the table in the kitchen centre. Another child asked, 'Can I have an apple?' Sam looked at the apples on his plate and said, 'Sure, I have 6 anyways'",
+    "Isla fulfilled this expectation to count objects without pointing at them one by one",
+    Date.new(2013, 8, 5), "blocks.jpg", chris_class, c_isla,
+    cat_language
+)
+create_event(
+    "Listen and respond to others for a variety of purposes",
+    nil,
+    nil,
+    Date.new(2013, 8, 8), nil, chris_class, c_isla,
+    cat_language
+)
+create_event(
+    "Recognized some quantities without having to count",
+    "Isla sat at the table in the kitchen centre. Another child asked, 'Can I have an apple?' Sam looked at the apples on his plate and said, 'Sure, I have 6 anyways'",
+    "Isla fulfilled this expectation to count objects without pointing at them one by one",
+    Date.new(2013, 8, 9), "blocks.jpg", chris_class, c_isla,
+    cat_mathematics
+)
+create_event(
+    "Listen and respond to others for a variety of purposes",
+    nil,
+    nil,
+    Date.new(2013, 8, 9), nil, chris_class, c_isla,
+    cat_language
+)
 
+#c_orion events
 create_event(
     "Using terms related t time ""Tomorrow"" and ""Yesterday""",
     "...",
     "...",
-    Date.new(2012, 01, 16), nil, chris_class, c_orion,
+    Date.new(2012, 1, 16), nil, chris_class, c_orion,
     cat_cognition_sub1
 )
 create_event(
     "Beginning to show self-conscious emotions (Shame, Embarrassment, Guilt, Pride)",
     "...",
     "...",
-    Date.new(2013, 01, 21), nil, chris_class, c_orion,
+    Date.new(2013, 1, 21), nil, chris_class, c_orion,
     cat_emotional_sub1
 )
