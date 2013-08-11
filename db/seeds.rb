@@ -105,28 +105,28 @@ cat_physical_sub1 = create_category("Fine Motor", "...", cat_physical)
 
 #c_isla events
 create_event(
-	"Recognized some quantities without having to count", 
-	"Isla sat at the table in the kitchen centre. Another child asked, 'Can I have an apple?' Sam looked at the apples on his plate and said, 'Sure, I have 6 anyways'", 
-	"Isla fulfilled this expectation to count objects without pointing at them one by one",
+	"",
+	"Ava sprayed water on the concrete. Ava said, 'I sprayed my name.'",
+	nil,
 	Date.new(2013, 8, 1), "blocks.jpg", chris_class, c_isla,
 	cat_mathematics
 )
 create_event(
-	"Listen and respond to others for a variety of purposes", 
-	nil, 
+  "",
+  "Ava set up cups, spoons and a third cup on the concrete. Set like a table, Ava said, 'welcome to my tea party.' Cognitive : representation",
 	nil,
 	Date.new(2013, 8, 3), nil, chris_class, c_isla,
 	cat_language
 )
 create_event(
-    "Recognized some quantities without having to count",
-    "Isla sat at the table in the kitchen centre. Another child asked, 'Can I have an apple?' Sam looked at the apples on his plate and said, 'Sure, I have 6 anyways'",
-    "Isla fulfilled this expectation to count objects without pointing at them one by one",
+    "",
+    "Ava and Bevin transferred water to a pile of dirt. Bevin said, 'here you can use this one' social: helping skills: offering materials",
+    nil,
     Date.new(2013, 8, 5), "blocks.jpg", chris_class, c_isla,
     cat_mathematics
 )
 create_event(
-    nil,
+    "",
     "Ava cut a tomato and placed pieces into four diff cups to serve equal portions. Cognitive sorting, counting,",
     nil,
     Date.new(2013, 8, 7), nil, chris_class, c_isla,
@@ -175,14 +175,14 @@ create_event(
     cat_language
 )
 create_event(
-    nil,
+    "",
     "Ava helping skills, asks griffin to join in building a sand castle to cheer him up.",
     nil,
     Date.new(2013, 8, 9), nil, chris_class, c_isla,
     cat_physical_sub1
 )
 create_event(
-    nil,
+    "",
     "Ava proud of her character and her abilities as a 5 yr old",
     nil,
     Date.new(2013, 8, 9), nil, chris_class, c_isla,
@@ -212,35 +212,35 @@ create_event(
     cat_physical
 )
 create_event(
-    nil,
+    "",
     "Elise cog attn regulation with scooping water",
     nil,
     Date.new(2013, 8, 8), nil, chris_class, c_orion,
     cat_physical
 )
 create_event(
-    nil,
+    "",
     "Atticus looked at the gravel and walks back to his shoes put them on and then walked back onto the gravel. Cog prob solv",
     nil,
-    Date.new(2013, 8, 8), nil, chris_class, c_orion,
+    Date.new(2013, 8, 8), "groupplay.jpg", chris_class, c_orion,
     cat_mathematics
 )
 create_event(
-    nil,
+    "",
     "Ophelia hits an elephant against ECE shoulder. Elephant makes noise. Ophelia hits other hand on ECE's other shoulder. No sounds. Ophelia repeats. Cognition cause and effect.",
     nil,
     Date.new(2013, 8, 6), nil, chris_class, c_orion,
     cat_physical
 )
 create_event(
-    nil,
+    "",
     "Mia transferred water from one bucket to another with a cup",
     nil,
-    Date.new(2013, 8, 6), nil, chris_class, c_orion,
+    Date.new(2013, 8, 6), "groupplay.jpg", chris_class, c_orion,
     cat_physical
 )
 create_event(
-    nil,
+    "",
     "Bevin said, 'there's two now. We'll use the small cup to water the small one and the big one for the big one'",
     nil,
     Date.new(2013, 8, 4), nil, chris_class, c_orion,
