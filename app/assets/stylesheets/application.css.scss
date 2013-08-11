@@ -10,7 +10,10 @@ $left_margin : 50px;
 	@include transition(all .3s linear);
 }
 
-
+  a, a:hover {
+    color: #78bec0;
+    text-decoration: none;
+  }
 
 
 body, html, h1,h2,h3,h4,h5,h6{padding:0; margin:0; line-height:100%; font-family:Open Sans}
@@ -274,8 +277,4 @@ div.event-list {
 
 #activity textarea {
 	width:90%;
-}
-
-.our-video {
-	display:none;
 }
