@@ -10,9 +10,7 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require jquery.ui.all
+//= require jquery.min
 //= require bootstrap
 //= require storyjs-embed
 //= require_tree .

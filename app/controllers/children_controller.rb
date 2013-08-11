@@ -10,6 +10,7 @@ class ChildrenController < ApplicationController
   def show
 
     @child = Child.find(params[:id])
+    @events = Event.where(child_id:params[:id])
 
     respond_to do |format|
       format.html # index.html.erb

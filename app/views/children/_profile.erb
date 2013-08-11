@@ -1,8 +1,8 @@
 <section class="row profile content-area">
   <aside class="current-educator">
       <%= image_tag(asset_path("avatars/teacher.jpg"), :class => "educator-pic") %>
-      <a href="#" id="send-message" class="button">Send Erin a message</a>
-  </aside>
+<a href="#sendMessage" role="button" class="button" data-toggle="modal">Send Erin a message</a>
+ </aside>
   <%= image_tag asset_path "avatars/" + @child.picture_url %>
   <dl>
     <dt>Name</dt>
@@ -20,38 +20,21 @@
   <div class="clearfix"></div>
 </section>
 
-<div id="message-form" title="Send Erin a message">
-<form>
-  <fieldset>
-    <label for="message">Message</label>
-    <input type="textarea" name="message" id="message" class="text ui-widget-content ui-corner-all" />
-  </fieldset>
-  </form>
-</div>
+<!-- Button to trigger modal -->
 
-<script>
-
-  $(document).ready(function() {
-    $( "#message-form" ).dialog({
-      autoOpen: false,
-      height: 300,
-      width: 350,
-      modal: true,
-      buttons: {
-        "Send": function() {
-            $( this ).dialog( "close" );
-        },
-        Cancel: function() {
-          $( this ).dialog( "close" );
-        }
-      },
-      close: function() {
-        allFields.val( "" ).removeClass( "ui-state-error" );
-      }
-    });
-  });
  
-    $( "#send-message" ).button().click(function() {
-        $( "#message-form" ).dialog( "open" );
-      });
-</script>
+<!-- Modal -->
+<div id="sendMessage" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="sendMessageLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="sendMessageLabel">Send a message to Erin</h3>
+  </div>
+  <div class="modal-body">
+    <p>What would you like to say?</p>
+    <textarea rows="5" style="width:90%"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary" data-dismiss="modal">Send</button>
+  </div>
+</div>
