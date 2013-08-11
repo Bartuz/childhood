@@ -62,13 +62,16 @@ $(document).ready(function(){
 		// console.log(quote);
 		var author = randomizer("a");
 		// console.log(author);
-		$("#txt").hide();
-		$("#author").hide();
-		$("#txt").text(quote);
-		$("#author").text(author);
-		$("#author").fadeIn('slow').css("display","inline-block");
-				$("#txt").fadeIn('slow').css("display","inline-block");
+		// $("#txt").fadeOut(2000);
+		$("#whole-quote").fadeOut(2000, function(){
+			$("#txt").text(quote);
+			$("#author").text(author);
+		})
+		$("#whole-quote").fadeIn(1000)//.css("display","inline-block");
+		// $("#author").fadeIn(1500).css("display","inline-block");
+		// $("#author").css("display","inline-block")
 		}	
+	$("#whole-quote").hide();
 	randomQuote();
 	var quotesLoop = setInterval(function(){randomQuote()},5000)
 })
