@@ -49,7 +49,9 @@ $(document).ready(function(){
 	var randomQuote = function(){
 	console.log("randomQuote");
 	var quote = randomizer("m");
+	console.log(quote);
 	var author = randomizer("a");
+	console.log(author);
 	$("#txt").fadeOut('slow');
 	$("#author").fadeOut('slow');
 	$("#txt").text(quote);
