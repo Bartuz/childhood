@@ -2,19 +2,19 @@
 <h2>My Family</h2>
 
 <div class="people content-area">
-  <h3>Children <%= link_to "Add New Child", new_child_path, :class=>"button add-child" %></h3>
-
+  <h3>Children </h3>
+<!-- <%= link_to "Add New Child", new_child_path, :class=>"button add-child" %> -->
   <ul>
   <% @children.each do |child| %>
       <li>
         <article>
           <section class="person">
-            <a href="<%= child_path( child ) %>">
+             <%= link_to child_path( child ) do %>
               <header>
                 <h4><%= child.first_name %></h4>
               </header>
-              <%= image_tag(asset_path("avatars/" + child.picture_url)) %>
-            </a>
+              <%= image_tag(asset_path("avatars/" + child.picture_url), :class => "child-pic") %>
+            <% end %>
           </section>
           <section class="tools">
             <a href="<%= child_path( child ) %>"><i class="icon-zoom-in"></i></a>
@@ -24,6 +24,20 @@
         </article>
       </li>
   <% end %>
+  <li>
+      <article>
+        <section class="person">
+          <%= link_to new_child_path do %>
+            <header>
+              <h4> Add new </h4>
+            </header>
+            <div class="child-pic">
+             <i style="line-height:120px;" class="special-plus icon-plus-sign"></i>
+            </div>
+          <% end %>
+        </section>
+      </article>
+    </li>
   </ul>
   <div class="clearfix"></div>
 </div>

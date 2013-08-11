@@ -9,7 +9,7 @@
   <div class="people content-area">
     <h3>
       Children
-      <%= link_to "Add New Child", new_child_path, :class=>"button add-child" %></h3>
+     <!--  <%= link_to "Add New Child", new_child_path, :class=>"button add-child" %></h3> -->
 
     <ul>
       <% @children.each do |child| %>
@@ -38,7 +38,22 @@
         </article>
       </li>
 
-      <% end %></ul>
+      <% end %>
+       <li>
+      <article>
+        <section class="person">
+          <%= link_to new_child_path do %>
+            <header>
+              <h4> Add new </h4>
+            </header>
+            <div class="child-pic">
+             <i style="line-height:120px;" class="special-plus icon-plus-sign"></i>
+            </div>
+          <% end %>
+        </section>
+      </article>
+    </li>
+    </ul>
     <div class="clearfix"></div>
   </div>
 </div>
