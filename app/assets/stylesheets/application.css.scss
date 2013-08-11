@@ -57,6 +57,7 @@ h2 {
 	color: $teal; 
 	margin-bottom: 31px;
 	line-height:24px;
+	font-weight:200;
 }
 
 h3 {
@@ -133,6 +134,8 @@ section.person {
 	box-shadow: 2px 2px 2px #EFEFEF;
 	h4 {
 		padding:4px 0px;
+		color:#666;
+		font-weight:200;
 	}
 
 	a {
@@ -165,6 +168,13 @@ section.tools {
 @import "welcome";
 @import "children";
 
+a {
+	color:$teal;
+	
+	h2, h3 {
+	text-decoration:none;
+	}
+}
 
  .special-plus {
  	font-size:70px;
@@ -259,4 +269,9 @@ div.event-list {
 			float:left;
 		}
 	}
+}
+
+
+#activity textarea {
+	width:90%;
 }

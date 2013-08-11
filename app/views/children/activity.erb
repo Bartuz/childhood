@@ -5,8 +5,8 @@
   <%= render "profile" %>
 
 
-<div class="row content-area">
-  <div class="col-3">
+<div class="row-fluid content-area">
+  <div class="span3">
     <ul class="nav nav-pills nav-stacked">
       <li class="<%= params[:action] == "activity" ? "active" : "" %>">
         <%= link_to "Log Activity", activity_child_path %>
@@ -19,7 +19,7 @@
       </li>
     </ul>
   </div>
-  <div class="col-9">
+  <div class="span9">
 
     <%= render params[:action] %>
 
