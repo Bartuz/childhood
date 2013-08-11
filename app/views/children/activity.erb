@@ -1,7 +1,7 @@
  <div class="hero-blurb" style="margin: 0 auto; width:900px;">
-
-  <h2>Class List > <%= @child.first_name %></h2>
-
+  <%= link_to educators_path do %>
+ <h3>Class List > <%= @child.first_name %></h3>
+<% end %>
   <%= render "profile" %>
 
 

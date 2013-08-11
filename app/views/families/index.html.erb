@@ -7,8 +7,8 @@
 </h3> 
   <ul>
   <% @children.each do |child| %>
-      <li>
-       <%= link_to child_path( child ) do %>
+      <%= link_to child_path( child ) do %>
+      <li class="child-li">
         <article>
             <aside class="profile">
              <%= link_to child_path( child ) do %>
@@ -24,7 +24,6 @@
                 <dt>Home Address</dt>
                 <dd><%= format_address(child) %></dd>
               </dl>
-              <% end %>
             </aside>
           <section class="person">
               <header>
@@ -36,6 +35,7 @@
         </article>
             <% end %>
       </li>
+                    <% end %>
   <% end %>
   </ul>
   <div class="clearfix"></div>
