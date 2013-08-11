@@ -1,44 +1,44 @@
-                
-        <!-- Hero Unit-->
-        <div id="hero-unit">
-            <div class="hero-unit-cont">
-            <div class="hero-blurb">
-                <h1>It's about<br/>relationships.</h1>
-                <div class="hero-text">
-                    Early childhood development sets the foundation for life long learning, behaviour, and health. That's why LearningLoop makes it easier than ever to keep track of your child's milestones, and work as a team with their educators. You can even talk to your child's ECE about questions you might have.            </div>
-                </div>
+             
+<!-- Hero Unit-->
+<div id="hero-unit">
+    <div class="hero-unit-cont">
+        <div class="hero-blurb">
+            <h1>It's about<br/>relationships.</h1>
+            <div class="hero-text">
+                Early childhood development sets the foundation for life long learning, behaviour, and health. That's why LearningLoop makes it easier than ever to keep track of your child's milestones, and work as a team with their educators. You can even talk to your child's ECE about questions you might have.            </div>
             </div>
-        
         </div>
         
-        <div id="content">
-        
-            <div class="select-role">
-                <div class="select-role-cont">
+    </div>
+
+    <div id="content">
+
+        <div class="select-role">
+            <div class="select-role-cont">
                 <h3>To start, please pick your role:</h3>
-                <a href="#" class="edu">Educator</a>
-                <a href="#" class="par">Parent/Caregiver</a>
-                </div>
-            </div>
-            
-            <div class="value-cont">
-                <div class="value">
-                
-                    <div class="one">
-                       <%= image_tag asset_path("homepage/kid1.jpg") %>
-                        Fosters respect in children for diversity, equity and inclusion
-                    </div>
-                    
-                    <div class="two">
-                       <%= image_tag asset_path("homepage/kid2.jpg") %>
-                        Strengthens the ability of early childhood settings to meet the needs of young children
-                    </div>
-                    
-                    <div class="three">
-                       <%= image_tag asset_path("homepage/kid3.jpg") %>
-                        Strengthens partnerships between families &amp; communities.
-                    </div>
-                    
-                </div>
+                <%= link_to "Educator", educators_path, class: "edu" %>
+                 <%= link_to "Parent/Caregiver", families_path, class: "par" %>
             </div>
         </div>
+
+        <div class="value-cont">
+            <div class="value">
+
+                <div class="one">
+                 <%= image_tag asset_path("homepage/kid1.jpg") %>
+                 Fosters respect in children for diversity, equity and inclusion
+             </div>
+
+             <div class="two">
+                 <%= image_tag asset_path("homepage/kid2.jpg") %>
+                 Strengthens the ability of early childhood settings to meet the needs of young children
+             </div>
+
+             <div class="three">
+                 <%= image_tag asset_path("homepage/kid3.jpg") %>
+                 Strengthens partnerships between families &amp; communities.
+             </div>
+
+         </div>
+     </div>
+ </div>

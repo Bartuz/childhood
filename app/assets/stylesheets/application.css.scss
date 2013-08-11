@@ -174,5 +174,14 @@ div.event-list {
 	td.category,
 	td.indicator {
 		border-bottom: solid 1px #EFEFEF;
+		cursor:pointer;
+	}
+
+	tr:hover > td {
+		background:#EFEFEF;
+	}
+
+	tr.event-details:hover > td {
+		background:none;
 	}
 }
