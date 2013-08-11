@@ -9,6 +9,7 @@ $teal : #78bec0;
 $left_margin : 50px;
 
 body, html, h1,h2,h3,h4,h5,h6{padding:0; margin:0; line-height:100%; font-family:Open Sans}
+
 body{background:url('homepage/bg.jpg')}
 
 .header-bg{min-width:900px; position:absolute; z-index:-1000; width:100%; display:block; height:110px; top:0}
@@ -24,20 +25,6 @@ nav{display:block; float:right; margin: 60px 0 0 0}
 nav a:link, nav a:visited{color:#222; font-weight:bolder; font-size:12px; margin-right:10px; text-decoration:none;}
 .logo{background:url('homepage/logo.png'); margin-top: 30px;display: inline-block; width:410px; height:130px; background-repeat:no-repeat; padding: 30px 0 0 80px; font-size:39px; color:#fff; text-shadow:1px 1px 2px #ccc; letter-spacing:-1px;}
 
-.pre-footer-cont{width:100%; background:#d4ec89; height:140px;}
-#pre-footer{width:900px; margin: 0 auto}
-.footer-links{margin-top: 12px;height:120px; float:right; right:0; display:block; padding: 10px 0 0 0}
-.footer-links a:link,
-.footer-links a:visited{text-decoration:none; color:#222; display:block; right:0; text-align:right; opacity: 0.6; font-weight:bold; padding:3px 0px 1px 50px; font-size:12px;}
-
-.footer-cont{height:40px; width:100%; background:#222}
-.footer-logo img{margin-top:-120px; margin-bottom: -18px;}
-footer{height:20px; clear:both;background:#222; color:#fff; font-size:10px; padding: 10px 0; width:900px; margin: 0 auto;}
-footer .footer-copy{margin-bottom: 10px;text-align:right; margin-top:-14px;}
-
-body, html, h1,h2,h3,h4,h5,h6{padding:0; margin:0; line-height:100%; font-family:Open Sans}
-body{ padding-bottom:150px; color: #333; }
-
 div#header {
   .header-bg{min-width:900px; z-index:-1000; width:100%; background:$lime; display:block; height:110px; top:0}
   header{width:900px; margin: 0 auto; position:absolute; top:20px; left:$left_margin; }
@@ -49,14 +36,17 @@ div#header {
   nav{position:absolute; right:0; top:30px}
   nav a:link, nav a:visited{color:#222; font-weight:bolder; font-size:12px; margin-right:10px; text-decoration:none;}
 }
-
-#pre-footer{ position:absolute; width:100%; z-index:-2; clear:both;display:block; width:100%; background:$lime;}
-.footer-links{height:120px; right:0; display:block; padding: 10px 0 0 0}
+.pre-footer-cont{width:100%; background:#d4ec89; height:140px;}
+#pre-footer{width:900px; margin: 0 auto}
+.footer-links{margin-top: 12px;height:120px; float:right; right:0; display:block; padding: 10px 0 0 0}
 .footer-links a:link,
-.footer-links a:visited{text-decoration:none; color:#222; display:block; right:0; width:200px; margin-left: 800px; text-align:right; opacity: 0.6; font-weight:bold; padding:3px 50px 1px 50px; font-size:12px}
-.footer-logo img{position:absolute; bottom:0; top:50px; left:50px}
-footer{clear:both;background:#222; color:#fff; font-size:10px; padding: 10px 0; width:100%; z-index:-100; margin-top:130px; z-index:-10px; position:absolute}
-footer .footer-copy{text-align:right; max-width:950px}
+.footer-links a:visited{text-decoration:none; color:#222; display:block; right:0; text-align:right; opacity: 0.6; font-weight:bold; padding:3px 0px 1px 50px; font-size:12px;}
+
+.footer-cont{height:40px; width:100%; background:#222}
+.footer-logo img{margin-top:-120px; margin-bottom: -18px;}
+footer{height:20px; clear:both;background:#222; color:#fff; font-size:10px; padding: 10px 0; width:900px; margin: 0 auto;}
+footer .footer-copy{margin-bottom: 10px;text-align:right; margin-top:-14px;}
+
 
 h2 { 
 	color: $teal; 
@@ -89,6 +79,64 @@ a.button:visited{
 a.button:hover{
 	background:#459294;
 }
+
+.content-area {
+	box-shadow: 2px 2px 2px #CCC;
+	background:#FFF;
+	padding:12px;
+	border-radius:7px;
+	border:solid 1px #EFEFEF;
+
+	clear:both;
+	margin-bottom:31px;
+}
+
+div.people {
+	ul {
+		padding:0px;
+		list-style:none;
+		margin:31px 0px;
+		
+		li {
+			display:block;
+			float:left;
+		}
+	}
+}
+
+section.person {
+
+	padding-bottom:12px;
+	margin-right:31px;		
+	background: #FFF;
+	text-align:center;
+	border-radius:7px;
+	border:solid 1px #EFEFEF;
+	border-bottom:0px;
+
+	box-shadow: 2px 2px 2px #EFEFEF;
+	h4 {
+		padding:4px 0px;
+	}
+
+	a {
+		text-decoration:none;
+	}
+
+	img {
+		border-top:solid 1px #CCC;
+		border-bottom:solid 1px #CCC;
+	}
+
+	&:hover {
+		background-color:$lime;
+	}
+}
+
+section.tools {
+	padding:7px;
+}
+
 
 @import "classrooms";
 @import "educators";

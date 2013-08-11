@@ -2,7 +2,7 @@
 
   <h2>My Family > <%= @child.first_name %></h2>
 
-  <section class="profile">
+  <section class="profile content-area">
     <%= image_tag asset_path "avatars/" + @child.picture_url %>
     <dl class="horizontal">
       <dt>Name</dt>
@@ -14,9 +14,11 @@
       <dt>Home Address</dt>
       <dd><%= format_address(@child) %></dd>
     </dl>
+  <div class="clearfix"></div>
   </section>
 
-  <section class="records">
+
+  <section class="records content-area">
       <div id="timeline-embed">
         <div id="timeline"></div>
       </div>
