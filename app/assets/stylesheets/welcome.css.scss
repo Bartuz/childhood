@@ -38,6 +38,45 @@ nav a:link, nav a:visited{color:#222; font-weight:bolder; font-size:12px; margin
 	z-index:222;
  	padding: 0 0 0 50px;
 }
+#quotes{
+	float:left;
+	margin-top:52px;
+	margin-left: 130px;
+	font-family: Open Sans;
+	font-size:26px;
+	color:white;
+	text-shadow:1px 1px 2px #ccc;
+}
+#quotes:before {
+color:#ccc;
+content:open-quote;
+font-size:3.7em;
+line-height:.1em;
+margin-right:.25em;
+vertical-align:-.4em;
+color: #87D2F0;
+position: absolute;
+margin-left: -46px;
+
+}
+
+#author{
+	color: black;
+	font-style: italic;
+	position: absolute;
+	margin-top: 30px;
+	text-indent: -90px;
+	opacity: .5;
+	font-size: 20px;
+	margin-top: 27px;
+	font-size: 16px;
+}
+#author:before{
+	content:"@";
+}
+
+
+
 .value{text-align:center}
 .value img{margin:0 auto 20px auto; clear:both; display:block; font-size:12px;}
 .value .one{padding: 20px 10px; width: 280px; display:inline-block; float:left}
