@@ -6,6 +6,7 @@ LearningLoop::Application.routes.draw do
   root 'welcome#index'
 
   get 'aboutus' => 'welcome#about'
+  get 'signup' => 'signup#signup'
 
 
   # Example of regular route:
