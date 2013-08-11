@@ -8,14 +8,20 @@ Array.prototype.randomElement = function (rand) {
   // return cos;
   return this[rand];
 };
-var authors = ["melinium","kellysy","bronzedane","mumm","tlorke","jol4nta","alicepractise","biGBro","adamson32","marpec","eddies","zywiecdobry","kurkaa","torontaah"];
+var authors = ["jake","kellysy","bronzedane","bronze93","ghost9","jol4nta","alicepractise","biGBro","adamson32","marpec","eddies","zywiecdobry","kurkaa","torontaah", "cbuccell","jakea"];
 var messages = [
-	"This will change everything",
-	"My kid is a big boy",
-	"I'll go back Poland in 1 week",
-	"Breakfast was pretty good",
-	"I live near quens parks",
-	"Give me tennis ball"
+	"Parental involvement enhances performance",
+	"Parents support schools by knowing",
+	"Gathering evidence is important",
+	"This software is efficient and easy",
+	"This software could help 70% of kids",
+	"Parent teacher communication is important",
+	"Let's engage teachers, educators and parents!",
+	"LearningLoop is a great classroom tool",
+	"I would use it again and again",
+	"This tool could help over 250,000 children!",
+	"Sign me up today! I want to be in the loop",
+	"If you're in the know, you're in the LearningLoop",
 ];
 var authorspool = []
 var messagespool = []
