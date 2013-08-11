@@ -21,7 +21,9 @@
             <div class="accordion-heading">
               <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#event<%= event.id %>">
                 <div><%= event.created_at.strftime("%a %b %d %Y") %></div>
-                <div><%= event.category.parent_category.description %></div>
+                <% if event.category == nil? %>
+                <%= event.category.parent_category.description %></div>
+                <% end %>
                 <div><%= event.category.description %></div>
                 <div><%= event.indicator%></div>
               </a>

@@ -38,7 +38,11 @@ class ChildrenController < ApplicationController
   def log_activity
     @child = Child.find(params[:child_id])
     @classroom = @child.classrooms.first
-    @category = Category.find(params[:skill])
+    cat_id = params[:skill]
+    if cat_id == nil
+      cat_id = params[:domain]
+    end
+    @category = Category.find(cat_id)
     @event = Event.new(:indicator=>params[:indicator],
                        :observations=>params[:observation],
                        :interpretation=>params[:interpretation],
