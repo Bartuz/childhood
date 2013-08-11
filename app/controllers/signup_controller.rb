@@ -1,6 +1,6 @@
 class SignupController < ApplicationController
 
-	layout 'signup'
+	# layout 'signup'
 
 	def signup
 	    respond_to do |format|
