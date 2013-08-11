@@ -1,7 +1,12 @@
 <section class="row-fluid profile content-area">
   <aside class="current-educator">
-      <%= image_tag(asset_path("teachers/chris.jpg"), :class => "educator-pic") %>
-<a href="#sendMessage" role="button" class="button" data-toggle="modal">Send Chris a message</a>
+    <% if @child.educational_setting == "School" %>
+        <%= image_tag(asset_path("teachers/chris.jpg"), :class => "educator-pic") %>
+        <a href="#sendMessage" role="button" class="button" data-toggle="modal">Send Chris a message</a>
+    <% else %>
+        <%= image_tag(asset_path("teachers/jess_erin.jpg"), :class => "educator-pic") %>
+        <a href="#sendMessage" role="button" class="button" data-toggle="modal">Send Jess & Erin a message</a>
+    <% end %>
  </aside>
   <%= image_tag asset_path "avatars/" + @child.picture_url %>
   <dl>
@@ -14,7 +19,7 @@
     <dt>Known Health Concerns</dt>
     <dd><%= format_health_notes(@child) %></dd>
     <dt>Home Address</dt>
-    <dd><%= format_address(@child) %></dd>
+    <dd><%= format_address(@child)[0..-10] %></dd>
   </dl>
 
   <div class="clearfix"></div>
