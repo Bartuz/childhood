@@ -1,5 +1,5 @@
 
-section.profile {
+.profile {
 	img {
 		float:left;
 		margin-right:31px;
@@ -13,6 +13,10 @@ section.profile {
 			display:block;
 			text-align:right;
 			margin-right:24px;
+		}
+
+		dd {
+			text-align:left;
 		}
 
 	}

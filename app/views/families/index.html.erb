@@ -1,43 +1,42 @@
 <div class="hero-blurb" style="margin: 0 auto; width:900px;">
 <h2>My Family</h2>
 
-<div class="people content-area">
-  <h3>Children </h3>
-<!-- <%= link_to "Add New Child", new_child_path, :class=>"button add-child" %> -->
+<div class="family people content-area">
+  <h3>Children
+  <%= link_to "add my child", new_child_path, :class=>"button add-child" %>
+</h3> 
   <ul>
   <% @children.each do |child| %>
       <li>
+       <%= link_to child_path( child ) do %>
         <article>
-          <section class="person">
+            <aside class="profile">
              <%= link_to child_path( child ) do %>
+              <dl>
+                <dt>Name</dt>
+                <dd><%= child.first_name %> <%= child.last_name %></dd>
+                <dt>Educational Setting</dt>
+                <dd><%= child.educational_setting %></dd>
+                <dt>Date of Birth</dt>
+                <dd><%= child.birthdate.strftime("%B %d, %Y") %></dd>
+                <dt>Known Health Concerns</dt>
+                <dd><%= format_health_notes(child) %></dd>
+                <dt>Home Address</dt>
+                <dd><%= format_address(child) %></dd>
+              </dl>
+              <% end %>
+            </aside>
+          <section class="person">
               <header>
                 <h4><%= child.first_name %></h4>
               </header>
               <%= image_tag(asset_path("avatars/" + child.picture_url), :class => "child-pic") %>
-            <% end %>
           </section>
-          <section class="tools">
-            <a href="<%= child_path( child ) %>"><i class="icon-zoom-in"></i></a>
-            <a href="#"><i class="icon-plus-sign"></i></a>
-            <a href="#"><i class="icon-remove-sign"></i></a>
-          </section>
+            <div class="clearfix"></div>
         </article>
+            <% end %>
       </li>
   <% end %>
-  <li>
-      <article>
-        <section class="person">
-          <%= link_to new_child_path do %>
-            <header>
-              <h4> Add new </h4>
-            </header>
-            <div class="child-pic">
-             <i style="line-height:120px;" class="special-plus icon-plus-sign"></i>
-            </div>
-          <% end %>
-        </section>
-      </article>
-    </li>
   </ul>
   <div class="clearfix"></div>
 </div>

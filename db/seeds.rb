@@ -74,6 +74,26 @@ c_orion = create_child("Orion", "Rousseaux-Bridle", p_max, Date.new(2011, 3, 29)
 chris_class = create_classroom("Chris' Classroom", "", [e_chris], [ c_isla, c_orion ])
 
 cat_mathematics = create_category("Mathematics", "Study of numbers")
+create_category("Numeration", "", cat_mathematics)
+create_category("Pattern", "", cat_mathematics)
+create_category("Sorting", "", cat_mathematics)
+create_category("Data management", "", cat_mathematics)
+create_category("Measurement", "", cat_mathematics)
+create_category("Geometry", "", cat_mathematics)
+create_category("Process", "", cat_mathematics)
+create_category("Problem solving", "", cat_mathematics)
+create_category("Reasoning", "", cat_mathematics)
+create_category("Reflecting", "", cat_mathematics)
+create_category("Selecting tools", "", cat_mathematics)
+create_category("Connecting", "", cat_mathematics)
+
+cat_science = create_category("Science and Technology", "")
+create_category("Awarenewss", "", cat_science)
+create_category("Observing", "", cat_science)
+create_category("Predicting", "", cat_science)
+create_category("Communicating", "", cat_science)
+
+
 cat_language = create_category("Language", "Study of speaking")
 
 cat_cognition = create_category("Cognition", "...")

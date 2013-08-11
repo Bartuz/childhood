@@ -162,10 +162,10 @@ section.tools {
 @import "children";
 
 
-.special-plus {
-	font-size:70px;
-	line-height: 120px;
-}
+// .special-plus {
+// 	font-size:70px;
+// 	line-height: 120px;
+// }
 .vco-slider .content-container .media {
 	width:auto !important;
 }
@@ -205,5 +205,15 @@ div.event-list {
 
 	tr.event-details:hover > td {
 		background:none;
+	}
+}
+
+.page-about-us {
+
+	h3 {margin-bottom:12px;
+	}
+
+	img {
+		width:600px;
 	}
 }

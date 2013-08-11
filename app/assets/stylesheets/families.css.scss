@@ -1,5 +1,25 @@
-.add-caregiver,
 .add-child {
-	margin-left:31px;
+	float:right;
 }
 
+
+.family.people {
+	li {
+		display:block;
+		float:none;
+		margin-bottom:31px;
+		
+		a {
+			text-decoration:none;
+		}
+
+		section.person {
+			margin:0px;
+		}
+
+		aside.profile {
+			float:right;
+			width:600px;
+		}
+	}
+}
