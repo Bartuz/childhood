@@ -105,32 +105,32 @@ cat_physical_sub1 = create_category("Fine Motor", "...", cat_physical)
 
 #c_isla events
 create_event(
-	"",
+	"Letter & name recognition and verbal communication",
 	"Ava sprayed water on the concrete. Ava said, 'I sprayed my name.'",
 	nil,
 	Date.new(2013, 8, 1), "blocks.jpg", chris_class, c_isla,
-	cat_mathematics
+	cat_language
 )
 create_event(
-  "",
-  "Ava set up cups, spoons and a third cup on the concrete. Set like a table, Ava said, 'welcome to my tea party.' Cognitive : representation",
+  "Sorting & math",
+  "Ava set up cups, spoons and a third cup on the concrete. Set like a table, Ava said, 'welcome to my tea party.'",
 	nil,
 	Date.new(2013, 8, 3), nil, chris_class, c_isla,
 	cat_language
 )
 create_event(
-    "",
+    "Gross motor skills & social skills",
     "Ava and Bevin transferred water to a pile of dirt. Bevin said, 'here you can use this one' social: helping skills: offering materials",
     nil,
     Date.new(2013, 8, 5), "blocks.jpg", chris_class, c_isla,
-    cat_mathematics
+    cat_physical_sub1
 )
 create_event(
-    "",
+    "Sorting & classifying",
     "Ava cut a tomato and placed pieces into four diff cups to serve equal portions. Cognitive sorting, counting,",
     nil,
     Date.new(2013, 8, 7), nil, chris_class, c_isla,
-    cat_science
+    cat_mathematics
 )
 create_event(
     "Spatial awareness, sharing and playing with others.",
@@ -175,16 +175,16 @@ create_event(
     cat_language
 )
 create_event(
-    "",
+    "Social & emotional",
     "Ava helping skills, asks griffin to join in building a sand castle to cheer him up.",
-    nil,
+    "Empathy and patience",
     Date.new(2013, 8, 9), nil, chris_class, c_isla,
     cat_physical_sub1
 )
 create_event(
-    "",
+    "Emotional development",
     "Ava proud of her character and her abilities as a 5 yr old",
-    nil,
+    "Positive self image",
     Date.new(2013, 8, 9), nil, chris_class, c_isla,
     cat_physical
 )
@@ -195,7 +195,7 @@ create_event(
     "Galen scooped up the dirt in a cup and then poured it out onto the grass. He watched dirt fall and then reached down to pick up the dirt again.",
     nil,
     Date.new(2013, 8, 10), nil, chris_class, c_orion,
-    cat_cognition_sub1
+    cat_cognition
 )
 create_event(
     "Self regulation",
@@ -205,44 +205,37 @@ create_event(
     cat_emotional
 )
 create_event(
-    "Self regulation",
-    "Atticus said, 'They're gonna have a wash in there.' Comm Lang Lit - forming sentences",
+    "Forming sentences",
+    "Atticus said, 'They're gonna have a wash in there.'",
     nil,
     Date.new(2013, 8, 10), nil, chris_class, c_orion,
-    cat_physical
+    cat_language
 )
 create_event(
-    "Something",
-    "Elise cog attn regulation with scooping water",
+    "Attention regulation",
+    "Ellise scooped water repeatedly and transferred water to various areas",
     nil,
     Date.new(2013, 8, 8), nil, chris_class, c_orion,
-    cat_physical
+    cat_cognition
 )
 create_event(
-    "Something",
-    "Atticus looked at the gravel and walks back to his shoes put them on and then walked back onto the gravel. Cog prob solv",
+    "Problem solving",
+    "Atticus looked at the gravel and walks back to his shoes put them on and then walked back onto the gravel.",
     nil,
     Date.new(2013, 8, 8), "groupplay.jpg", chris_class, c_orion,
-    cat_mathematics
+    cat_cognition
 )
 create_event(
-    "Something",
-    "Ophelia hits an elephant against ECE shoulder. Elephant makes noise. Ophelia hits other hand on ECE's other shoulder. No sounds. Ophelia repeats. Cognition cause and effect.",
+    "Cause and effect",
+    "Ophelia hits an elephant against ECE shoulder. Elephant makes noise. Ophelia hits other hand on ECE's other shoulder. No sounds. Ophelia repeats.",
     nil,
     Date.new(2013, 8, 6), nil, chris_class, c_orion,
-    cat_physical
+    cat_cognition
 )
 create_event(
-    "Something",
-    "Mia transferred water from one bucket to another with a cup",
-    nil,
-    Date.new(2013, 8, 6), "groupplay.jpg", chris_class, c_orion,
-    cat_physical
-)
-create_event(
-    "Something",
-    "Bevin said, 'there's two now. We'll use the small cup to water the small one and the big one for the big one'",
+    "Problem solving",
+    "Bevin said, 'there's two cups now. We'll use the small cup to water the small plants and the big cup for the big plants.'",
     nil,
     Date.new(2013, 8, 4), nil, chris_class, c_orion,
-    cat_physical
+    cat_cognition
 )
