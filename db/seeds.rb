@@ -65,8 +65,8 @@ p_max = create_parent("Maxime", "Rousseaux-Bridle", "max@12gsolutions.com")
 p_alison = create_parent("Alison", "Livey Gibbins", "canada_fish@hotmail.com")
 
 e_chris = create_educator("Chris", "Buccella", "chrisbuccella@gmail.com")
-e_mtomas = create_educator("Ms. J", "Tomas", "ms.jtomas@gmail.com")
-e_erin = create_educator("Erin", "Williams", "to.erin.williams@gmail.com")
+#e_mtomas = create_educator("Ms. J", "Tomas", "ms.jtomas@gmail.com")
+#e_erin = create_educator("Erin", "Williams", "to.erin.williams@gmail.com")
 
 c_isla = create_child("Ava", "", p_max, Date.new(2009, 6, 9), "School", "isla.jpg", "", "612 Alexander Rd., Toronto, Ontario, M5G 15C")
 c_orion = create_child("Galen", "Gibbins", p_max, Date.new(2011, 3, 29), "Child care", "02.jpg", "", "612 Alexander Rd., Toronto, Ontario, M5G 15C")
@@ -126,8 +126,8 @@ create_event(
     cat_mathematics
 )
 create_event(
-    "Listen and respond to others for a variety of purposes",
     nil,
+    "Ava cut a tomato and placed pieces into four diff cups to serve equal portions. Cognitive sorting, counting,",
     nil,
     Date.new(2013, 8, 7), nil, chris_class, c_isla,
     cat_science
@@ -160,19 +160,89 @@ create_event(
     Date.new(2013, 8, 11), "sandbucket.jpg", chris_class, c_isla,
     cat_physical
 )
-
-#c_orion events
 create_event(
-    "Using terms related t time ""Tomorrow"" and ""Yesterday""",
-    "...",
-    "...",
-    Date.new(2012, 1, 16), nil, chris_class, c_orion,
+    "Cognition - Problem Solving",
+    "Ava recognized she needed water for the seeds she was planting. She walked over to the water play and used a scoop to bring water over to her pot.",
+    "Ava understands that seeds need water to grow. She did not have water in the gardening centre so found another way to collect what she needed to help her plants grow.",
+    Date.new(2013, 8, 10), nil, chris_class, c_isla,
     cat_cognition_sub1
 )
 create_event(
-    "Beginning to show self-conscious emotions (Shame, Embarrassment, Guilt, Pride)",
-    "...",
-    "...",
-    Date.new(2013, 1, 21), nil, chris_class, c_orion,
-    cat_emotional_sub1
+    "Conversing with adults",
+    "Ava said: 'you can take two, put water in your tank and put your hand in to squish them.'",
+    nil,
+    Date.new(2013, 8, 10), nil, chris_class, c_isla,
+    cat_language
+)
+create_event(
+    nil,
+    "Ava helping skills, asks griffin to join in building a sand castle to cheer him up.",
+    nil,
+    Date.new(2013, 8, 9), nil, chris_class, c_isla,
+    cat_physical_sub1
+)
+create_event(
+    nil,
+    "Ava proud of her character and her abilities as a 5 yr old",
+    nil,
+    Date.new(2013, 8, 9), nil, chris_class, c_isla,
+    cat_physical
+)
+
+#c_orion events
+create_event(
+    "Spatial exploration",
+    "Galen scooped up the dirt in a cup and then poured it out onto the grass. He watched dirt fall and then reached down to pick up the dirt again.",
+    nil,
+    Date.new(2013, 8, 10), nil, chris_class, c_orion,
+    cat_cognition_sub1
+)
+create_event(
+    "Self regulation",
+    "Do you want to build a sand castle now? Falls down. Ok, let's make a cake instead.",
+    "Recovering",
+    Date.new(2013, 8, 9), nil, chris_class, c_orion,
+    cat_emotional
+)
+create_event(
+    "Self regulation",
+    "Atticus said, 'They're gonna have a wash in there.' Comm Lang Lit - forming sentences",
+    nil,
+    Date.new(2013, 8, 10), nil, chris_class, c_orion,
+    cat_physical
+)
+create_event(
+    nil,
+    "Elise cog attn regulation with scooping water",
+    nil,
+    Date.new(2013, 8, 8), nil, chris_class, c_orion,
+    cat_physical
+)
+create_event(
+    nil,
+    "Atticus looked at the gravel and walks back to his shoes put them on and then walked back onto the gravel. Cog prob solv",
+    nil,
+    Date.new(2013, 8, 8), nil, chris_class, c_orion,
+    cat_mathematics
+)
+create_event(
+    nil,
+    "Ophelia hits an elephant against ECE shoulder. Elephant makes noise. Ophelia hits other hand on ECE's other shoulder. No sounds. Ophelia repeats. Cognition cause and effect.",
+    nil,
+    Date.new(2013, 8, 6), nil, chris_class, c_orion,
+    cat_physical
+)
+create_event(
+    nil,
+    "Mia transferred water from one bucket to another with a cup",
+    nil,
+    Date.new(2013, 8, 6), nil, chris_class, c_orion,
+    cat_physical
+)
+create_event(
+    nil,
+    "Bevin said, 'there's two now. We'll use the small cup to water the small one and the big one for the big one'",
+    nil,
+    Date.new(2013, 8, 4), nil, chris_class, c_orion,
+    cat_physical
 )
