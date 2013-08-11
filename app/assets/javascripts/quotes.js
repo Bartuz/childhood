@@ -1,9 +1,5 @@
 
 Array.prototype.randomElement = function (rand) {
-	var rand = Math.random();
-	while (pool.indexOf(rand) != -1){
-		rand = Math.random();
-	}
   return this[Math.floor(rand * this.length)];
 };
 var authors = ["melinium","kellysy","bronzedane","mumm","tlorke","jol4nta","alicepractise","biGBro","adamson32","marpec","eddies","zywiecdobry","kurkaa","torontaah"];
@@ -25,7 +21,7 @@ var randomizer = function(array){
 			rand = Math.random()		
 		}
 		authorspool << rand;
-		return authorsPool.randomElement(rand)
+		return authorspool.randomElement(rand)
 	} else {
 		var rand = Math.random();
 		while (messagespool.indexOf(rand) != -1){
@@ -49,13 +45,13 @@ $(document).ready(function(){
 	var randomQuote = function(){
 	var quote = randomizer("m");
 	var author = randomizer("a");
-	$("#txt").fadeout('slow');
-	$("#author").fadeout('slow');
+	$("#txt").fadeOut('slow');
+	$("#author").fadeOut('slow');
 	$("#txt").text(quote);
 	$("#author").text(author);
-	$("#txt").fadein('fast').then(function(){
-		$("#author").fadein('fast');
-	});
+	$("#txt").fadeIn('fast');
+		$("#author").fadeIn('fast');
+	;
 	}	
-	var quotesLoop = setInterval(function(){randomQuote(),4000})
+	var quotesLoop = setInterval(function(){randomQuote(),40000})
 })
