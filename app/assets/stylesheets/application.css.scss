@@ -8,15 +8,33 @@ $teal : #78bec0;
 
 $left_margin : 50px;
 
-@import "classrooms";
-@import "educators";
-@import "families";
-@import "parent";
-@import "welcome";
-@import "children";
+body, html, h1,h2,h3,h4,h5,h6{padding:0; margin:0; line-height:100%; font-family:Open Sans}
+body{background:url('homepage/bg.jpg')}
+
+.header-bg{min-width:900px; position:absolute; z-index:-1000; width:100%; display:block; height:110px; top:0}
 
 
-/*
+.tagline{background:#f4f3ef; border-top:1px solid #c4c2b8; border-bottom:1px solid #c4c2b8; width:100%;}
+.tagline-cont{padding-top:3px;font-size: 12px; letter-spacing:1px; height:23px; width:900px; margin: 6px auto 0 auto; padding-left:170px}
+
+header#primaryHeader{width:100%; margin: 0 auto; background:#d4ec89; height:120px }
+.header-cont{width:900px; margin: 0 auto;}
+
+nav{display:block; float:right; margin: 60px 0 0 0}
+nav a:link, nav a:visited{color:#222; font-weight:bolder; font-size:12px; margin-right:10px; text-decoration:none;}
+.logo{background:url('homepage/logo.png'); margin-top: 30px;display: inline-block; width:410px; height:130px; background-repeat:no-repeat; padding: 30px 0 0 80px; font-size:39px; color:#fff; text-shadow:1px 1px 2px #ccc; letter-spacing:-1px;}
+
+.pre-footer-cont{width:100%; background:#d4ec89; height:140px;}
+#pre-footer{width:900px; margin: 0 auto}
+.footer-links{margin-top: 12px;height:120px; float:right; right:0; display:block; padding: 10px 0 0 0}
+.footer-links a:link,
+.footer-links a:visited{text-decoration:none; color:#222; display:block; right:0; text-align:right; opacity: 0.6; font-weight:bold; padding:3px 0px 1px 50px; font-size:12px;}
+
+.footer-cont{height:40px; width:100%; background:#222}
+.footer-logo img{margin-top:-120px; margin-bottom: -18px;}
+footer{height:20px; clear:both;background:#222; color:#fff; font-size:10px; padding: 10px 0; width:900px; margin: 0 auto;}
+footer .footer-copy{margin-bottom: 10px;text-align:right; margin-top:-14px;}
+
 body, html, h1,h2,h3,h4,h5,h6{padding:0; margin:0; line-height:100%; font-family:Open Sans}
 body{ padding-bottom:150px; color: #333; }
 
@@ -39,7 +57,7 @@ div#header {
 .footer-logo img{position:absolute; bottom:0; top:50px; left:50px}
 footer{clear:both;background:#222; color:#fff; font-size:10px; padding: 10px 0; width:100%; z-index:-100; margin-top:130px; z-index:-10px; position:absolute}
 footer .footer-copy{text-align:right; max-width:950px}
-*/
+
 h2 { 
 	color: $teal; 
 	margin-bottom: 31px;
@@ -49,10 +67,12 @@ h3 {
   color: $teal;
   font-weight:200;
 }
+
 .content-container {
 	padding:$left_margin;
 	line-height:1.2em;
 	background: transparent url('homepage/bg.jpg') repeat 0px 0px;
+	margin: 0 auto; width:900px; padding-top:5px;
 }
 
 a.button,
@@ -69,3 +89,10 @@ a.button:visited{
 a.button:hover{
 	background:#459294;
 }
+
+@import "classrooms";
+@import "educators";
+@import "families";
+@import "parent";
+@import "welcome";
+@import "children";

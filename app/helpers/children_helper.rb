@@ -18,8 +18,8 @@ module ChildrenHelper
             event_picture_url = asset_path("events/" + event.picture_url) unless event.picture_url.blank?
             events << {
                 :startDate=>event.occurred_on.strftime("%Y,%m,%d"),
-                :headline=>event.title,
-                :text=>event.notes,
+                :headline=>event.indicator,
+                :text=>event.observations,
                 :asset=> {
                     :media => event_picture_url,
                     :credit => "",
@@ -41,45 +41,6 @@ module ChildrenHelper
             }
         }
         timeline.to_json.html_safe
-#         <<EOS
-#             {
-#             "timeline":
-#             {
-#                 "headline":"Isla's Learning Loop",
-#                 "type":"default",
-#                 "text":"People say stuff",
-#                 "startDate":"2012,1,26",
-#                 "date": [
-#                     {
-#                         "startDate":"2011,12,12",
-#                         "endDate":"2012,1,27",
-#                         "headline":"Vine",
-#                         "text":"<p>Vine Test</p>",
-#                         "asset":
-#                         {
-#                             "media":"http://localhost:3000/assets/avatars/01.jpg",
-#                             "thumbnail":"http://localhost:3000/assets/avatars/01.jpg",
-#                             "credit":"",
-#                             "caption":""
-#                         }
-#                     },
-#                     {
-#                         "startDate":"2012,1,26",
-#                         "endDate":"2012,1,27",
-#                         "headline":"Sh*t Politicians Say",
-#                         "text":"<p>In true political fashion, his character rattles off common jargon heard from people running for office.</p>",
-#                         "asset":
-#                         {
-#                             "media":"http://localhost:3000/assets/avatars/01.jpg",
-#                             "thumbnail":"http://localhost:3000/assets/avatars/01.jpg",
-#                             "credit":"",
-#                             "caption":""
-#                         }
-#                     }
-#                 ]
-#             }
-#         }
-# EOS
     end
 
 end

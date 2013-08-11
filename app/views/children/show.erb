@@ -1,27 +1,4 @@
-<div class="row">
-
-   <div class="hero-blurb" style="margin: 0 auto; width:900px; padding-top:5px;">
-  <h3>My Family > <%= @child.first_name %></h3>
-
-  <div class="col-lg-4">
-    <%= image_tag asset_path "avatars/" + @child.picture_url %>
-  </div>
-
-  <div class="profile">
-  	<dl>
-  		<dt>Name</dt>
-  		<dd></dd>
-  		<dt>Registration</dt>
-  		<dd></dd>
-  		<dt>Date of Birth</dt>
-  		<dd><%= @child.birthdate.strftime("%B %d, %Y") %></dd>
-  	</dl>
-  </div>
-    </div>
-
-<div id="timeline-embed">
-  <div id="timeline"></div>
-</div>
+<div class="content-container">
 
   <h2>My Family > <%= @child.first_name %></h2>
 
@@ -40,27 +17,9 @@
   </section>
 
   <section class="records">
-    <ul class="nav nav-tabs" id="recordTabs">
-      <li class="active"><a href="#timeline">Timeline</a></li>
-      <li><a href="#list">List</a></li>
-      <li><a href="#messages">Messages</a></li>
-    </ul>
-
-    <div class="tab-content">
-      <div class="tab-pane active" id="timeline">
-        <div id="timeline-embed">
-          <div id="timeline"></div>
-        </div>
+      <div id="timeline-embed">
+        <div id="timeline"></div>
       </div>
-      <div class="tab-pane" id="list">
-        !! Show list of events !!
-      </div>
-      <div class="tab-pane" id="messages">
-        !! Show list of messages !!
-      </div>
-      
-    </div>
-
   </section>
 
   <script type="text/javascript">

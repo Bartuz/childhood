@@ -1,13 +1,15 @@
 <div class="hero-blurb" style="margin: 0 auto; width:900px;">
   <h2>Class List</h2>
 
-<!--   <%= link_to "Add New Child", new_child_path %>
+  <!--   <%= link_to "Add New Child", new_child_path %>
   <%= link_to "Edit Class List", new_child_path %>
   <%= link_to "Add New Child", new_child_path %>
   <%= link_to "Edit Class List", new_child_path %>
- -->
+  -->
   <div class="people">
-  <h3>Children <%= link_to "Add New Child", new_child_path, :class=>"button add-child" %></h3>
+    <h3>
+      Children
+      <%= link_to "Add New Child", new_child_path, :class=>"button add-child" %></h3>
 
     <ul>
       <% @children.each do |child| %>

@@ -73,19 +73,20 @@ c_orion = create_child("Orion", "Rousseaux-Bridle", p_max, Date.new(2011, 3, 29)
 
 chris_class = create_classroom("Chris' Classroom", "", [e_chris], [ c_isla, c_orion ])
 
-cat_numeracy = create_category("Numeracy", "Study of numbers")
-cat_numeration = create_category("Numeration", "", cat_numeracy)
-cat_pattern = create_category("Patterns", "", cat_numeracy)
-cat_sorting = create_category("sorting", cat_numeracy)
-cat_data_management = create_category("data management", cat_numeracy)
-cat_measurement = create_category("measurment", cat_numeracy)
+cat_mathematics = create_category("Mathematics", "Study of numbers")
+cat_language = create_category("Language", "Study of speaking")
 
-create_event("Numerations", "My observations", "An indicator", Date.new(2012, 01, 16), "blocks.jpg", chris_class, c_isla, 
-	cat_numeration
+create_event(
+	"Recognized some quantities without having to count", 
+	"Isla sat at the table in the kitchen centre. Another child asked, 'Can I have an apple?' Sam looked at the apples on his plate and said, 'Sure, I have 6 anyways'", 
+	"Isla fulfilled this expectation to count objects without pointing at them one by one",
+	Date.new(2012, 01, 16), "blocks.jpg", chris_class, c_isla, 
+	cat_mathematics
 )
-create_event("Sorting Stuff", "My observations", "An indicator", Date.new(2012, 01, 21), nil, chris_class, c_isla, 
-	cat_sorting
-)
-create_event("Data Play", "My observations", "An indicator", Date.new(2012, 01, 24), nil,chris_class, c_isla, 
-	cat_data_management
+create_event(
+	"Listen and respond to others for a variety of purposes", 
+	nil, 
+	nil,
+	Date.new(2012, 01, 21), nil, chris_class, c_isla, 
+	cat_language
 )

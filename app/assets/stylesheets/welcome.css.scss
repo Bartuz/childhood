@@ -1,8 +1,4 @@
 
-body, html, h1,h2,h3,h4,h5,h6{padding:0; margin:0; line-height:100%; font-family:Open Sans}
-
-body{background:url('homepage/bg.jpg')}
-
 .header-bg{min-width:900px; position:absolute; z-index:-1000; width:100%; display:block; height:110px; top:0}
 
 header#primaryHeader{width:100%; margin: 0 auto; background:#d4ec89; height:120px }
@@ -30,23 +26,25 @@ nav a:link, nav a:visited{color:#222; font-weight:bolder; font-size:12px; margin
 .select-role a:hover{background:#459294}
 .edu{margin-right:20px; margin-left:40px}
 
-.pre-footer-cont{width:100%; background:#d4ec89; height:140px;}
-#pre-footer{width:900px; margin: 0 auto}
-.footer-links{margin-top: 12px;height:120px; float:right; right:0; display:block; padding: 10px 0 0 0}
-.footer-links a:link,
-.footer-links a:visited{text-decoration:none; color:#222; display:block; right:0; text-align:right; opacity: 0.6; font-weight:bold; padding:3px 0px 1px 50px; font-size:12px;}
-
-.footer-cont{height:40px; width:100%; background:#222}
-.footer-logo img{margin-top:-120px; margin-bottom: -18px;}
-footer{height:20px; clear:both;background:#222; color:#fff; font-size:10px; padding: 10px 0; width:900px; margin: 0 auto;}
-footer .footer-copy{margin-bottom: 10px;text-align:right; margin-top:-14px;}
-
 
 .value-cont{width:100%;border-top:1px solid #c4c2b8; border-bottom:1px solid #c4c2b8; background:#f4f3ef}
-.value{display:block; width: 900px; margin: 0 auto; height:230px; background:#f4f3ef; z-index:222; padding: 0 0 0 50px}
+.value{
+	display:block; 
+	width: 900px; 
+	margin: 0 auto; 
+	height:230px; 
+	background:#f4f3ef; 
+	z-index:222;
+ 	padding: 0 0 0 50px;
+}
 .value{text-align:center}
 .value img{margin:0 auto 20px auto; clear:both; display:block; font-size:12px;}
-.value .one{padding: 20px 10px; width: 280px; display:inline-block; float:left}
-.value .two{padding: 20px 10px; width:280px; display:inline-block; float:left}
-.value .three{padding: 20px 10px; width: 280px; display:inline-block;float:left}
+.value div {
+	padding: 20px 10px;
+	width:280px;
+	float:right;
+}
+// .value .one{padding: 20px 10px; width: 280px; display:inline-block; float:left}
+// .value .two{padding: 20px 10px; width:280px; display:inline-block; float:left}
+// .value .three{padding: 20px 10px; width: 280px; display:inline-block;float:left}
 .one,.two,.three{text-align:center; font-size:14px; line-height:20px;}
