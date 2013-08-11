@@ -7,9 +7,11 @@ $teal : #78bec0;
 
 $left_margin : 50px;
 
-* {
+*:hover {
 	@include transition(all .3s linear);
 }
+
+
 
 
 body, html, h1,h2,h3,h4,h5,h6{padding:0; margin:0; line-height:100%; font-family:Open Sans}
@@ -171,6 +173,7 @@ section.tools {
 .vco-slider .content-container .text {
 	width:100% !important;
 }
+
 
 
 
