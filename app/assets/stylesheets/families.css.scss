@@ -4,6 +4,11 @@
 }
 
 div.people {
+	box-shadow: 2px 2px 2px #CCC;
+	background:#FFF;
+	padding:12px;
+	border-radius:7px;
+	border:solid 1px #EFEFEF;
 
 	clear:both;
 	margin-bottom:31px;
@@ -23,11 +28,14 @@ div.people {
 section.person {
 
 	padding-bottom:12px;
-	margin-right:12px;		
+	margin-right:31px;		
 	background: #FFF;
 	text-align:center;
-	border-radius:12px;
-	
+	border-radius:7px;
+	border:solid 1px #EFEFEF;
+	border-bottom:0px;
+
+	box-shadow: 2px 2px 2px #EFEFEF;
 	h4 {
 		padding:4px 0px;
 	}
@@ -37,8 +45,9 @@ section.person {
 	}
 
 	img {
-		// border:solid 2px $teal;
-		// box-shadow: 1px 1px 1px #CCC;
+		border-top:solid 1px #CCC;
+		border-bottom:solid 1px #CCC;
+		
 	}
 
 	&:hover {
