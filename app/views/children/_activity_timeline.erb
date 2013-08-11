@@ -1,0 +1,24 @@
+<section class="row records content-area">
+    <div id="timeline-embed">
+      <div id="timeline"></div>
+    </div>
+</section>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+	var timeline = <%= child_timeline_json(@child) %>
+
+    createStoryJS({
+      // debug: true,
+    	type: "timeline",
+			width:      '100%',
+			height:     '400',
+			js: '/assets/timeline.js',
+			css:  '/assets/timeline.css',
+			source: timeline,
+			embed_id:   'timeline-embed'
+		});
+
+});
+</script>

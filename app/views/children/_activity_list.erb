@@ -1,41 +1,41 @@
-<ul class="nav nav-tabs">
-  <li class="active">
-    <a href="#activity">Activity List</a>
-  </li>
-</ul>
-
-<div id="myTabContent" class="tab-content">
-  <div class="tab-pane fade active in" id="activity">
-
-    <div class="accordion" id="accordion2">
-      <ul>
-        <li>Date</li>
-        <li>Domain</li>
-        <li>Skill</li>
-        <li>Indicator</li>
-      </ul>
-
+<div class="event-list">
+  <table>
+    <thead>
+      <tr>
+        <th class="date">Date</th>
+        <th class="category">Skill</th>
+        <th class="indicator">Indicator</th>
+      </tr>
+    </thead>
+    <tbody>
       <% @events.each do | event | %>
-
-          <div class="accordion-group">
-            <div class="accordion-heading">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#event<%= event.id %>">
-                <div><%= event.created_at.strftime("%a %b %d %Y") %></div>
-                <div><%= event.category.parent_category.description %></div>
-                <div><%= event.category.description %></div>
-                <div><%= event.indicator%></div>
-              </a>
-            </div>
-            <div id="event<%= event.id %>" class="accordion-body collapse">
-              <div class="accordion-inner">
-                <strong>Observation:</strong> <%= event.observations %>
-                <br/>   <br/>
-                <strong>Interpretation:</strong> <%= event.interpretation %>
-              </div>
-            </div>
-          </div>
-
+      <tr class="event-row" data-toggle="event<%= event.id %>_details">
+        <td class="date"><%= event.occurred_on.strftime("%B %d, %Y") %></td>
+        <td class="category"><%= event.category.name %></td>
+        <td class="indicator"><%= event.indicator%></td>
+      </tr>
+      <tr id="event<%= event.id %>_details" class="event-details">
+        <td colspan="4">
+          <dl class="horizontal">
+            <dt>Observation:</dt>
+            <dd><%= event.observations %></dd>
+            <dt>Interpretation</dt>
+            <dd><%= event.interpretation %></dd>
+          </dl>
+        </td>
+      </tr>
       <% end %>
-    </div>
-  </div>
+    </tbody>
+  </table>
 </div>
+
+
+<script>
+  $(document).ready(function() {
+    $(".event-row td").click(function(e) {
+      $("#" + $(this).parent().data("toggle")).toggle();
+    });
+
+    $(".event-details").hide();
+  });
+</script>

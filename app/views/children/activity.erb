@@ -1,45 +1,12 @@
  <div class="hero-blurb" style="margin: 0 auto; width:900px;">
-<div class="row">
-  <h3>Class List > <%= @child.first_name %></h3>
-  <ul class="media-list">
-    <li class="media">
-      <a class="pull-left" href="#"><%= image_tag(asset_path "avatars/" + @child.picture_url) %> </a>
-      <div class="media-body">
-        <dl class="dl-horizontal">
 
-          <dd></dd>
-          <dt>Name</dt>
-          <dd><%= @child.first_name %> <%= @child.last_name %></dd>
+  <h2>Class List > <%= @child.first_name %></h2>
 
-          <dt>Registration</dt>
-          <dd><%= @child.created_at %></dd>
+  <%= render "profile" %>
 
-          <dt>Educational Setting</dt>
-          <dd><%= @child.educational_setting %></dd>
-          <br/>
-          <dt>Date of Birth</dt>
-          <dd><%= @child.birthdate %></dd>
 
-          <dt>Health Concerns</dt>
-          <dd>None</dd>
-          <br/>
-
-          <dt>Address</dt>
-          <dd></dd>
-
-          <dt>Caregiver/Parent 1</dt>
-          <dd></dd>
-
-          <dt>Caregiver/Parent 2</dt>
-          <dd></dd>
-        </dl>
-      </div>
-    </li>
-  </ul>
-</div>
-
-<div class="row">
-  <div class="col-4">
+<div class="row content-area">
+  <div class="col-3">
     <ul class="nav nav-pills nav-stacked">
       <li class="<%= params[:action] == "activity" ? "active" : "" %>">
         <%= link_to "Log Activity", activity_child_path %>
@@ -52,7 +19,7 @@
       </li>
     </ul>
   </div>
-  <div class="col-8">
+  <div class="col-9">
 
     <%= render params[:action] %>
 

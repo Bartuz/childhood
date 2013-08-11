@@ -154,3 +154,25 @@ section.tools {
 	width:100% !important;
 }
 
+
+
+div.event-list {
+	padding:12px;
+	th,td {
+		padding:12px;
+	}
+
+	th.date { width:25%; }
+	th.category { width:15%; }
+	th.indicator { width:60%; }
+
+	th {
+		border-bottom: solid 2px #EFEFEF;
+	}
+
+	td.date,
+	td.category,
+	td.indicator {
+		border-bottom: solid 1px #EFEFEF;
+	}
+}
