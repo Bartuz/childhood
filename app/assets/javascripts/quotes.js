@@ -1,5 +1,6 @@
 
 Array.prototype.randomElement = function (rand) {
+  console.log("prototype")
   return this[Math.floor(rand * this.length)];
 };
 var authors = ["melinium","kellysy","bronzedane","mumm","tlorke","jol4nta","alicepractise","biGBro","adamson32","marpec","eddies","zywiecdobry","kurkaa","torontaah"];
@@ -14,6 +15,7 @@ var messages = [
 var authorspool = []
 var messagespool = []
 var randomizer = function(array){
+	console.log("randomizer");
 	poolReseter();
 	if (array == "a"){
 		var rand = Math.random();
@@ -32,6 +34,7 @@ var randomizer = function(array){
 	}
 }
 var poolReseter = function(){
+	console.log("poolReseter");
 	if (authorspool.length == authors.length){
 		authorspool = [];
 	}
@@ -42,7 +45,9 @@ var poolReseter = function(){
 }
 
 $(document).ready(function(){
+	console.log("doc redy");
 	var randomQuote = function(){
+	console.log("randomQuote");
 	var quote = randomizer("m");
 	var author = randomizer("a");
 	$("#txt").fadeOut('slow');
@@ -53,5 +58,5 @@ $(document).ready(function(){
 		$("#author").fadeIn('fast');
 	;
 	}	
-	var quotesLoop = setInterval(function(){randomQuote(),40000})
+	var quotesLoop = setInterval(function(){randomQuote()},4000)
 })
