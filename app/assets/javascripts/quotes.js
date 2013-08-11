@@ -44,9 +44,11 @@ var randomizer = function(array){
 var poolReseter = function(){
 	// console.log("poolReseter");
 	if (authorspool.length == authors.length){
+		console.log("reset authorpool");
 		authorspool = [];
 	}
 	if (messagespool.length == messages.length){
+		console.log("reset messagepool");
 		messagespool = [];
 	}
 	return true;
@@ -64,8 +66,9 @@ $(document).ready(function(){
 		$("#author").hide();
 		$("#txt").text(quote);
 		$("#author").text(author);
-		$("#txt").fadeIn('slow').css("display","inline-block");
 		$("#author").fadeIn('slow').css("display","inline-block");
+				$("#txt").fadeIn('slow').css("display","inline-block");
 		}	
+	randomQuote();
 	var quotesLoop = setInterval(function(){randomQuote()},5000)
 })
