@@ -73,5 +73,5 @@ $(document).ready(function(){
 		}	
 	$("#whole-quote").hide();
 	randomQuote();
-	var quotesLoop = setInterval(function(){randomQuote()},5000)
+	var quotesLoop = setInterval(function(){randomQuote()},7500)
 })
