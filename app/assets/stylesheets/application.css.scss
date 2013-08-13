@@ -65,7 +65,7 @@ h2 {
 	font-weight:200;
 }
 
-h3 {
+h3,h4 {
   color: $teal;
   font-weight:200;
 }
@@ -229,8 +229,13 @@ div.event-list {
 
 .page-about-us {
 
+	color:#666;
+	font-size:18px;
+	line-height:1.2em;
+	
+
 	p {
-		line-height:20px;
+		margin-bottom:31px;
 	}
 	.img-circle{
 		border-radius:0; 
@@ -242,16 +247,39 @@ div.event-list {
 		margin:31px 0px;
 	}
 
-	img {
+	h4 {
+		margin:12px 0px;
+	}
+
+	img.team {
 		width:425px;
 		// border:solid 3px #EFEFEF;
 		box-shadow: 2px 2px 2px #CCC;
-}
+	}
 
 	.funfact {
-		font-size:18px;
-		line-height:18px;
+
+		a {
+			text-decoration:underline;
+		}
+
+		p.large {
+			font-size:18px;
+			line-height:22px;
+			margin-bottom:31px;
+		}
+	}
+
+	.press {
+		list-style-type:none;
+		padding:0px;
+		margin:0px;
+		
 		margin-bottom:31px;
+		li {
+			float:left;
+			margin-right:31px;
+		}
 	}
 
 	section.team {
@@ -295,8 +323,22 @@ div.event-list {
 }
 
 
-	.launch-video {
-		top: 2px !important;
-		position: relative !important;
-		font-weight:200;
+.launch-video {
+	top: 2px !important;
+	position: relative !important;
+	font-weight:200;
+}
+
+.page-sign-up {
+
+	font-size:18px;
+	line-height:20px;
+
+	p {
+		margin-bottom:31px;
+	}	
+	p.large {
+		font-size:24px;
+
 	}
+}
