@@ -77,6 +77,6 @@ $(document).ready(function(){
 		// $("#author").css("display","inline-block")
 		}	
 	$("#whole-quote").hide();
-	randomQuote();
-	var quotesLoop = setInterval(function(){randomQuote()},7500)
+	// randomQuote();
+	// var quotesLoop = setInterval(function(){randomQuote()},7500)
 })
