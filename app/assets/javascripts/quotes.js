@@ -1,82 +1,57 @@
-
-Array.prototype.randomElement = function (rand) {
-  // console.log("prototype");
-  // console.log(rand);
-  // console.log("losujemy COS!!!!!!")
-  // var cos = this[Math.floor(rand * this.length)];
-  // console.log(cos);
-  // return cos;
-  return this[rand];
-};
-var authors = ["jake","kellysy","bronzedane","bronze93","ghost9","jol4nta","alicepractise","biGBro","adamson32","marpec","eddies","zywiecdobry","kurkaa","torontaah", "cbuccell","jakea"];
-var messages = [
-	"Parental involvement enhances performance",
-	"Parents support schools by knowing",
-	"Gathering evidence is important",
-	"This software is efficient and easy",
-	"This software could help 70% of kids",
-	"Parent teacher communication is important",
-	"Let's engage teachers,educators and parents",
-	"LearningLoop is a great classroom tool",
-	"I would use it again and again",
-	"This tool could help over 250,000 children!",
-	"Sign me up today! I want to be in the loop",
+var quotes = [
+	{
+		author: "\tJoan, Parent",
+		msg: "I’m at work all day and I finally get to know what’s going on with my kid. I’d love for my husband and nanny to use it..."
+	},
+	{
+		author: "Sean, Parent",
+		msg: "This would be awesome to have my babysitter use."
+	},
+	{
+		author: "Chris, Junior Kindergarten Teacher",
+		msg: "I was using Learning Loop, making snacks, while working with an 8-month year old. Great for multi-tasking."
+	},
+	{
+		author: "Erin, RECE",
+		msg: "Why doesn’t this already exist? This should have been built a long time ago."
+	},
+	{
+		author: "Jessica, RECE",
+		msg: "I recorded 10 observations in an hour. I’ve NEVER been able to do that before with any of my kids."
+	},
+	{
+		author: "Matt Gardner of <a target='_blank' href='https://groupnotes.ca/'>GroupNotes</a> (winners of Startup Weekend TO and Global Startup Battle 2012)",
+		msg: "Great to see another kick ass viable company coming out of Startup Weekend!"
+	},
+	{
+		author: "Jamie, RECE",
+		msg: "This is a big step, not only for families and educators, but for the whole field of early childhood education."
+	}
 ];
-var authorspool = []
-var messagespool = []
-var randomizer = function(array){
-	// console.log("Now I randomize with " + array);
-	poolReseter();
-	if (array == "a"){
-		var rand = Math.floor(Math.random()*authors.length);
-		while (authorspool.indexOf(rand) != -1){
-			rand = Math.floor(Math.random()*authors.length);	
-			// console.log("reroll rand and " + rand )
-		}
-		// console.log(rand);
-		authorspool.push(rand);
-		return authors.randomElement(rand)
-	} else {
-		var rand = Math.floor(Math.random()*messages.length);
-		while (messagespool.indexOf(rand) > -1){
-			rand = Math.floor(Math.random()*messages.length);
-			// console.log("reroll rand and " + rand )		
-		}
-		messagespool.push(rand)
-		return messages.randomElement(rand)
-	}
-}
-var poolReseter = function(){
-	// console.log("poolReseter");
-	if (authorspool.length == authors.length){
-		console.log("reset authorpool");
-		authorspool = [];
-	}
-	if (messagespool.length == messages.length){
-		console.log("reset messagepool");
-		messagespool = [];
-	}
-	return true;
-}
-
+Array.prototype.randomElement = function () {
+  return this[Math.floor(Math.random() * this.length)];
+};
+var pool = [];
+var quote;
 $(document).ready(function(){
-	// console.log("doc redy");
 	var randomQuote = function(){
-		// console.log("I just entered randomQuote...");
-		var quote = randomizer("m");
-		// console.log(quote);
-		var author = randomizer("a");
-		// console.log(author);
-		// $("#txt").fadeOut(2000);
+		quote = quotes.randomElement()
+		while (pool.indexOf(quote) != -1) {
+			console.log(quote)
+			console.log(quotes.indexOf(quote))
+			quote = quotes.randomElement();
+		};
+		pool.push(quote);
+		if (quotes.length === pool.length){
+			pool = []
+		}
 		$("#whole-quote").fadeOut(1000, function(){
-			$("#txt").text(quote);
-			$("#author").text(author);
+			$("#txt").text(quote.msg);
+			$("#author").html(quote.author);
 		})
-		$("#whole-quote").fadeIn(1000)//.css("display","inline-block");
-		// $("#author").fadeIn(1500).css("display","inline-block");
-		// $("#author").css("display","inline-block")
+		$("#whole-quote").fadeIn(1000)
 		}	
 	$("#whole-quote").hide();
-	// randomQuote();
-	// var quotesLoop = setInterval(function(){randomQuote()},7500)
+	randomQuote();
+	var quotesLoop = setInterval(function(){randomQuote()},8500)
 })
