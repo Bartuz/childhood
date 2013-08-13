@@ -16,12 +16,11 @@ var messages = [
 	"This software is efficient and easy",
 	"This software could help 70% of kids",
 	"Parent teacher communication is important",
-	"Let's engage teachers, educators and parents!",
+	"Let's engage teachers,educators and parents",
 	"LearningLoop is a great classroom tool",
 	"I would use it again and again",
 	"This tool could help over 250,000 children!",
 	"Sign me up today! I want to be in the loop",
-	"If you're in the know, you're in the LearningLoop",
 ];
 var authorspool = []
 var messagespool = []
@@ -69,7 +68,7 @@ $(document).ready(function(){
 		var author = randomizer("a");
 		// console.log(author);
 		// $("#txt").fadeOut(2000);
-		$("#whole-quote").fadeOut(2000, function(){
+		$("#whole-quote").fadeOut(1000, function(){
 			$("#txt").text(quote);
 			$("#author").text(author);
 		})
