@@ -25,4 +25,8 @@ class WelcomeController < ApplicationController
 		
 	end
 
+	def press
+		
+	end
+
 end

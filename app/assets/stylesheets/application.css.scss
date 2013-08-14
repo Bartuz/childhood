@@ -235,7 +235,10 @@ div.event-list {
 	
 
 	p {
-		margin-bottom:31px;
+		margin-bottom:24px;
+	}
+	p:last-child{
+		margin-bottom: 0px;
 	}
 	.img-circle{
 		border-radius:0; 
@@ -266,7 +269,10 @@ div.event-list {
 		p.large {
 			font-size:18px;
 			line-height:22px;
-			margin-bottom:31px;
+			margin-bottom:23px;
+		}
+		p:last-child{
+			margin-bottom:0px;
 		}
 	}
 
@@ -283,8 +289,6 @@ div.event-list {
 	}
 
 	section.team {
-
-		padding-bottom:31px;
 		aside {
 			float:right;
 		}
@@ -341,4 +345,12 @@ div.event-list {
 		font-size:24px;
 
 	}
+}
+.asided{
+	display: inline-block;
+	float: left;
+	margin-right: 20px;
+}
+.about-finish{
+	margin-top:6px;
 }
