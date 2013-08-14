@@ -42,6 +42,8 @@ LearningLoop::Application.routes.draw do
        end
      end
 
+  get '*anything' => 'welcome#index'
+
   # Example resource route with more complex sub-resources:
   #   resources :products do
   #     resources :comments
