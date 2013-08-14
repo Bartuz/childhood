@@ -283,8 +283,11 @@ div.event-list {
 		
 		margin-bottom:31px;
 		li {
-			float:left;
-			margin-right:31px;
+			display:block;
+			margin-bottom: 35px;
+		}
+		li:last-child{
+			margin-bottom: 0;
 		}
 	}
 
