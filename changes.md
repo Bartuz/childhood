@@ -1,6 +1,6 @@
 # Change Log
 
-## v0.1.2 
+## v0.1.3 
 
 Requested by: Loren
 Requested On: 2013-08-14 08:52
@@ -13,3 +13,11 @@ Performed by: Max
 - [✔] A little more space in between Press and Media Sections
 - [✔] Instead of "Media" can we change to "As seen in:"
 - [✔] Could the logos be listed in rows? Lots of space on the right to bring those ones up there!
+
+Requested by: Loren
+Requested On: 2013-08-14 09:47
+Performed by: Filip
+
+- [✔] The quotes in the footer look great but are kind of hard to read.
+
+- [✔] Also, watch the formatting from Matt Gardner's (Groupnotes) quote...can we have everything justified to the left?

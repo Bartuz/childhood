@@ -44,11 +44,10 @@ nav a:link, nav a:visited{color:#222; font-weight:bolder; font-size:12px; margin
 	margin-left: 130px;
 	font-family: Open Sans;
 	font-size:26px;
-	color:white;
-	text-shadow:1px 1px 2px #ccc;
+	color:black;
 	width: 360px;
 	line-height: 20px;
-	text-shadow: 1px 1px 1px black;
+
 }
 #quot{
 	color:#ccc;
@@ -71,17 +70,15 @@ vertical-align:-.4em;
 color: #87D2F0;
 position: absolute;
 margin-left: -46px;
+text-shadow: 1px 1px 1px black;
 }
 
 #author{
-	color: #78bec0;
+	color: #0E5572;
 	font-style: italic;
 	position: absolute;
-	margin-top: 30px;
-	text-indent: -90px;
-	font-size: 20px;
-	margin-top: 27px;
-	font-size: 16px;
+	margin-top: 5px;
+	font-size: 13px;
 	text-shadow:none;
 }
 #author:before{
@@ -115,7 +112,6 @@ dd {
 	line-height: 25px;
 }
 #quotes{
-	text-shadow: 1px 1px 1px black;
 	width:530px;
 	font-size:18px;
 	line-height: 18px;
@@ -123,7 +119,7 @@ dd {
 #author{
 	width:480px;
 	font-size: 14px;
-	color:  #222;
+	color: #0E5572;
 	a {
 		text-decoration: underline;
 	}
