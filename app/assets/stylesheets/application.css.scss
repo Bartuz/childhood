@@ -233,6 +233,7 @@ div.event-list {
 	font-size:18px;
 	line-height:1.2em;
 	
+	padding-bottom:50px;
 
 	p {
 		margin-bottom:24px;
@@ -260,6 +261,10 @@ div.event-list {
 		box-shadow: 2px 2px 2px #CCC;
 	}
 
+	hr {
+		margin:31px 0px;
+	}
+
 	.funfact {
 
 		a {
@@ -283,11 +288,13 @@ div.event-list {
 		
 		margin-bottom:31px;
 		li {
+			float:left;
 			display:block;
-			margin-bottom: 35px;
+			margin-right: 31px;
+			margin-bottom: 31px;
 		}
 		li:last-child{
-			margin-bottom: 0;
+			margin-right: 0px;
 		}
 	}
 
