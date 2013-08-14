@@ -16,7 +16,7 @@ Requested by: Loren
 Requested On: 2013-08-14 08:52
 Performed by: Max
 
-- Change the media inquries line on the press page to "For inquiries about our beta launch, please contact info@learningloop.co"
+- [✔] Change the media inquries line on the press page to "For inquiries about our beta launch, please contact info@learningloop.co"
 
 
 ## v0.1.2 
